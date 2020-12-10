@@ -17,15 +17,15 @@ A flutter package with collection of simplified widgets that will make your appl
 - UdBasicButton
 - UdBasicTextInputField
 
-![enter image description here](http://www.shajedulislam.dev/udwidgets/buttons.png)
+![UdBasicButton](https://www.shajedulislam.dev/udwidgets/buttons.png)
 
-![enter image description here](http://www.shajedulislam.dev/udwidgets/card.png)
+![UdCard](https://www.shajedulislam.dev/udwidgets/card.png)
 
-![enter image description here](http://www.shajedulislam.dev/udwidgets/image.png)
+![UdAssetImage, UdNetworkImage & more](https://www.shajedulislam.dev/udwidgets/image.png)
 
-![enter image description here](http://www.shajedulislam.dev/udwidgets/textinput.png)
+![UdBasicTextInputField](https://www.shajedulislam.dev/udwidgets/textinput.png)
 
-![enter image description here](http://www.shajedulislam.dev/udwidgets/radio.png)
+![UdRadioButton](https://www.shajedulislam.dev/udwidgets/radio.png)
 
 ## About Contribution
 
