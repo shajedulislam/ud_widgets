@@ -18,4 +18,6 @@ export 'package:ud_widgets/widgets/images/base64_image.dart';
 
 export 'package:ud_widgets/widgets/input/basic_text_input_field.dart';
 
+export 'package:ud_widgets/widgets/shapes/shape.dart';
+
 export 'package:ud_widgets/constants/colors.dart';

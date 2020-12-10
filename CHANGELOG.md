@@ -1,3 +1,8 @@
+## 0.0.3 (Preview).
+
+* New shape widget added, some bugs fixed, README.md updated
+
+
 ## 0.0.2 (Preview).
 
 * Example added, README updated.
