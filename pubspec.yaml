@@ -1,7 +1,6 @@
 name: ud_widgets
 description: A flutter package with collection of simplified widgets that will make your application development faster. We used flutter widgets and customized in a way so that you can easily use them.
 version: 0.0.1
-author: Shajedul Islam <http://www.shajedulislam.dev>
 homepage: https://github.com/shajedulislam/ud_widgets
 
 environment:
