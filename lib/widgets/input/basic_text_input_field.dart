@@ -36,23 +36,23 @@ class UdBasicTextInputField extends StatelessWidget {
   final double shadowBlurRadius;
   final double shadowSpreadRadius;
 
-  /// To show default border for the text input field you must enable it first.
-  final bool enableDefaultBorder;
+  // /// To show default border for the text input field you must enable it first.
+  // final bool enableDefaultBorder;
 
-  /// To show border on focus for the text input field you must enable it first.
-  final bool enableFocusBorder;
+  // /// To show border on focus for the text input field you must enable it first.
+  // final bool enableFocusBorder;
 
-  /// To show default border for the text input field you must enable it using [ enableDefaultBorder ] first.
-  final Color borderColorDefault;
+  // /// To show default border for the text input field you must enable it using [ enableDefaultBorder ] first.
+  // final Color borderColorDefault;
 
-  /// To show border on focus for the text input field you must enable it using [ enableFocusBorder ] first.
-  final Color borderColorOnFocus;
+  // /// To show border on focus for the text input field you must enable it using [ enableFocusBorder ] first.
+  // final Color borderColorOnFocus;
 
-  /// To show default border for the text input field you must enable it using [ enableDefaultBorder ] first.
-  final double borderWidthDefault;
+  // /// To show default border for the text input field you must enable it using [ enableDefaultBorder ] first.
+  // final double borderWidthDefault;
 
-  /// To show border on focus for the text input field you must enable it using [ enableFocusBorder ] first.
-  final double borderWidthOnFocus;
+  // /// To show border on focus for the text input field you must enable it using [ enableFocusBorder ] first.
+  // final double borderWidthOnFocus;
   final double borderRadius;
   final Widget leftItem;
 
@@ -97,12 +97,12 @@ class UdBasicTextInputField extends StatelessWidget {
     this.fontSize,
     this.fontWeight,
     this.textAlignment,
-    this.enableDefaultBorder,
-    this.enableFocusBorder,
-    this.borderColorDefault,
-    this.borderColorOnFocus,
-    this.borderWidthDefault,
-    this.borderWidthOnFocus,
+    // this.enableDefaultBorder,
+    // this.enableFocusBorder,
+    // this.borderColorDefault,
+    // this.borderColorOnFocus,
+    // this.borderWidthDefault,
+    // this.borderWidthOnFocus,
     this.backgroundColor,
     this.borderRadius,
     this.padding,
@@ -127,6 +127,7 @@ class UdBasicTextInputField extends StatelessWidget {
       decoration: udContainerBoxDecoration(
         context: context,
         disableShadow: disableShadow,
+        borderRadius: borderRadius,
         backgroundColor: backgroundColor ?? DoNotUseThisPackageColors.white,
       ),
       padding: leftItem != null
@@ -160,19 +161,18 @@ class UdBasicTextInputField extends StatelessWidget {
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(borderRadius ?? _design * 2)),
                   borderSide: BorderSide(
-                    width: enableDefaultBorder != null ? borderWidthDefault ?? 1 : 0,
-                    color: enableDefaultBorder != null ? borderColorDefault ?? Colors.black : Colors.transparent,
+                    width: 0,
+                    color: Colors.transparent,
                   ),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(borderRadius ?? _design * 2)),
                   borderSide: BorderSide(
-                    width: enableFocusBorder != null ? borderWidthOnFocus ?? 1 : 0,
-                    color: enableFocusBorder != null ? borderColorOnFocus ?? Colors.black : Colors.transparent,
+                    width: 0,
+                    color: Colors.transparent,
                   ),
                 ),
-                filled: true,
-                fillColor: backgroundColor ?? DoNotUseThisPackageColors.white,
+                filled: false,
                 hintText: hintText ?? "Hint Text",
                 hintStyle: TextStyle(
                   color: hintTextColor ?? Colors.black38,
