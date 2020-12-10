@@ -145,14 +145,14 @@ class UdBasicTextInputField extends StatelessWidget {
                 contentPadding:
                     leftItem == null ? padding ?? EdgeInsets.symmetric(horizontal: _design * 4) : EdgeInsets.all(0),
                 enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(borderRadius ?? _design * 2)),
+                  borderRadius: BorderRadius.all(Radius.circular(0)),
                   borderSide: BorderSide(
                     width: 0,
                     color: Colors.transparent,
                   ),
                 ),
                 focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(borderRadius ?? _design * 2)),
+                  borderRadius: BorderRadius.all(Radius.circular(0)),
                   borderSide: BorderSide(
                     width: 0,
                     color: Colors.transparent,
