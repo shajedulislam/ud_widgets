@@ -23,36 +23,19 @@ class UdBasicTextInputField extends StatelessWidget {
   final int index;
   final String hintText;
   final Color hintTextColor;
-  final double hintTextfontSize;
   final double fontSize;
   final Color textColor;
   final TextAlign textAlignment;
   final FontWeight fontWeight;
   final EdgeInsets padding;
   final Color backgroundColor;
+  final Color borderColor;
+  final double borderWidth;
   final bool disableShadow;
   final Color shadowColor;
   final Offset shadowOffset;
   final double shadowBlurRadius;
   final double shadowSpreadRadius;
-
-  // /// To show default border for the text input field you must enable it first.
-  // final bool enableDefaultBorder;
-
-  // /// To show border on focus for the text input field you must enable it first.
-  // final bool enableFocusBorder;
-
-  // /// To show default border for the text input field you must enable it using [ enableDefaultBorder ] first.
-  // final Color borderColorDefault;
-
-  // /// To show border on focus for the text input field you must enable it using [ enableFocusBorder ] first.
-  // final Color borderColorOnFocus;
-
-  // /// To show default border for the text input field you must enable it using [ enableDefaultBorder ] first.
-  // final double borderWidthDefault;
-
-  // /// To show border on focus for the text input field you must enable it using [ enableFocusBorder ] first.
-  // final double borderWidthOnFocus;
   final double borderRadius;
   final Widget leftItem;
 
@@ -92,7 +75,6 @@ class UdBasicTextInputField extends StatelessWidget {
     this.index,
     this.hintText,
     this.hintTextColor,
-    this.hintTextfontSize,
     this.textColor,
     this.fontSize,
     this.fontWeight,
@@ -104,6 +86,8 @@ class UdBasicTextInputField extends StatelessWidget {
     // this.borderWidthDefault,
     // this.borderWidthOnFocus,
     this.backgroundColor,
+    this.borderColor,
+    this.borderWidth,
     this.borderRadius,
     this.padding,
     this.disableShadow,
@@ -126,13 +110,15 @@ class UdBasicTextInputField extends StatelessWidget {
       width: width ?? _design * 200,
       decoration: udContainerBoxDecoration(
         context: context,
-        disableShadow: disableShadow,
+        disableShadow: disableShadow ?? backgroundColor == Colors.transparent ? true : false,
         borderRadius: borderRadius,
+        borderColor: borderColor,
+        borderWidth: borderWidth,
         backgroundColor: backgroundColor ?? DoNotUseThisPackageColors.white,
       ),
       padding: leftItem != null
-          ? EdgeInsets.symmetric(
-              horizontal: _design * 4,
+          ? EdgeInsets.only(
+              left: _design * 8,
             )
           : null,
       child: Row(
@@ -140,7 +126,7 @@ class UdBasicTextInputField extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           leftItem ?? SizedBox.shrink(),
-          leftItem != null ? SizedBox(width: _design * 4) : SizedBox.shrink(),
+          SizedBox(width: _design * 4),
           Expanded(
             child: TextField(
               onTap: onTap ?? () {},
@@ -176,7 +162,7 @@ class UdBasicTextInputField extends StatelessWidget {
                 hintText: hintText ?? "Hint Text",
                 hintStyle: TextStyle(
                   color: hintTextColor ?? Colors.black38,
-                  fontSize: hintTextfontSize ?? 14,
+                  fontSize: fontSize ?? 14,
                 ),
               ),
             ),
