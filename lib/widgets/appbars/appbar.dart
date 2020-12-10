@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'dart:io';
 import '../../constants/colors.dart';
 import '../../functions/design.dart';
@@ -99,6 +100,10 @@ class UdAppBar extends StatelessWidget implements PreferredSizeWidget {
         );
   @override
   Widget build(BuildContext contextInside) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(
+      statusBarColor: Colors.white,
+      statusBarBrightness: Brightness.dark,
+    ));
     if (context == null) {
       print("==UD==> Please provide [ context ] for [ UdAppBar ]");
     }
