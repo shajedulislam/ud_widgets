@@ -33,13 +33,10 @@ A flutter package with collection of simplified widgets that will make your appl
 
 - UdBasicTextInputField
 
+- udAlert
+
 
 ## Demo
   
 
 ![Widget demo picture](https://www.shajedulislam.dev/udwidgets/ud_widget_example.png)
-
- 
-## About Contribution
-
-This is 100% open source and anyone can contribute in this package.
