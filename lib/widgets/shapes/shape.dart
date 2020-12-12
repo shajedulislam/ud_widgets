@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ud_widgets/functions/design.dart';
+import '../../functions/design.dart';
 import '../../constants/colors.dart';
 
 class UdShape extends StatelessWidget {

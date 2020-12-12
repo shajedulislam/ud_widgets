@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ud_widgets/ud_widgets.dart';
+import '../../ud_widgets.dart';
 
 class UdText extends StatelessWidget {
   final String text;

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../constants/colors.dart';
 import '../../functions/design.dart';
-import 'package:ud_widgets/ud_widgets.dart';
+import '../../ud_widgets.dart';
 
 class UdBasicTextInputField extends StatelessWidget {
   final double height;

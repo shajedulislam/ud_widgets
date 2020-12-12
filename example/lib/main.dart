@@ -89,7 +89,22 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 30),
-                UdBasicButton(title: "Button", width: 315, borderRadius: 4),
+                UdBasicButton(
+                  title: "Button",
+                  width: 315,
+                  borderRadius: 4,
+                  onTap: () {
+                    udAlert(
+                      context: context,
+                      title: "Hello",
+                      message: "This is a dialog message!",
+                      button1Text: "Ok",
+                      button1Function: () {
+                        print("Dialog button 1 pressed");
+                      },
+                    );
+                  },
+                ),
               ],
             ),
           ),
