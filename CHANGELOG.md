@@ -1,4 +1,8 @@
-## 0.0.4
+## 0.0.6
+
+* README.md updated
+
+## 0.0.5
 
 * text button, icon button, image button, svg button, svg image widgets added, README.md updated
 
