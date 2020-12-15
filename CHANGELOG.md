@@ -1,6 +1,10 @@
+## 0.0.4
+
+* text button, icon button, image button, svg button, svg image widgets added, README.md updated
+
 ## 0.0.4 (Preview)
 
-* Alert widget added, README.md updated
+* Alert widget added, example updated, README.md updated
 
 ## 0.0.3 (Preview)
 

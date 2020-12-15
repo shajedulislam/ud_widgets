@@ -19,6 +19,8 @@ A flutter package with collection of simplified widgets that will make your appl
 
 - UdAppBar
 
+- UdSvgImage
+
 - UdAssetImage
 
 - UdNetworkImage
@@ -27,9 +29,17 @@ A flutter package with collection of simplified widgets that will make your appl
 
 - UdBase64Image
 
-- UdRadioButton
-
 - UdBasicButton
+
+- UdTextButton
+
+- UdImageButton
+
+- UdIconButton
+
+- UdSvgButton
+
+- UdRadioButton
 
 - UdBasicTextInputField
 
