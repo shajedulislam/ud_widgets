@@ -91,7 +91,9 @@ class UdCard extends StatelessWidget {
           borderColor: borderColor,
           borderRadius: borderRadius,
           borderWidth: borderWidth,
-          disableShadow: disableShadow ?? backgroundColor == Colors.transparent ? true : false,
+          disableShadow: disableShadow ?? backgroundColor == Colors.transparent
+              ? true
+              : false,
           shadowColor: shadowColor,
           shadowOffset: shadowOffset,
           shadowBlurRadius: shadowBlurRadius,

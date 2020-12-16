@@ -56,11 +56,15 @@ class UdBasicButton extends StatelessWidget {
               context: context,
               borderRadius: borderRadius,
               shadowBlurRadius: shadowBlurRadius,
-              disableShadow: disableShadow ?? backgroundColor == Colors.transparent ? true : false,
+              disableShadow:
+                  disableShadow ?? backgroundColor == Colors.transparent
+                      ? true
+                      : false,
               shadowOffset: shadowOffset,
               shadowColor: shadowColor,
               shadowSpreadRadius: shadowSpreadRadius,
-              backgroundColor: backgroundColor ?? DoNotUseThisPackageColors.theme,
+              backgroundColor:
+                  backgroundColor ?? DoNotUseThisPackageColors.theme,
             )
           : null,
       child: RaisedButton(

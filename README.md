@@ -1,7 +1,7 @@
 
 # UD WIDGETS
 
-A flutter package with collection of simplified widgets that will make your application development faster. Flutter widgets has been used and customized in a way so that you can easily use them in your application.
+A flutter package with collection of simplified widgets that will make your application development easy and faster. Flutter widgets has been used and customized in a way so that you can easily use them in your application.
 
 
 

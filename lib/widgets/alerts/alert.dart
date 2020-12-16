@@ -72,7 +72,9 @@ Future<void> udAlert({
                   vertical: _design * 4,
                 ),
                 child: Row(
-                  mainAxisAlignment: button2Text != null ? MainAxisAlignment.spaceEvenly : MainAxisAlignment.center,
+                  mainAxisAlignment: button2Text != null
+                      ? MainAxisAlignment.spaceEvenly
+                      : MainAxisAlignment.center,
                   children: [
                     InkWell(
                       child: Container(
@@ -81,7 +83,8 @@ Future<void> udAlert({
                         alignment: Alignment.center,
                         child: UdText(
                           text: button1Text ?? "button 1",
-                          color: DoNotUseThisPackageColors.black.withOpacity(0.7),
+                          color:
+                              DoNotUseThisPackageColors.black.withOpacity(0.7),
                           fontSize: button1FontSize ?? 16,
                           fontWeight: FontWeight.w500,
                         ),
@@ -95,12 +98,14 @@ Future<void> udAlert({
                     button2Text != null
                         ? InkWell(
                             child: Container(
-                              padding: EdgeInsets.symmetric(horizontal: _design * 10),
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: _design * 10),
                               height: _design * 30,
                               alignment: Alignment.center,
                               child: UdText(
                                 text: button2Text ?? "button 2",
-                                color: DoNotUseThisPackageColors.black.withOpacity(0.7),
+                                color: DoNotUseThisPackageColors.black
+                                    .withOpacity(0.7),
                                 fontSize: button2FontSize ?? 16,
                                 fontWeight: FontWeight.w500,
                               ),

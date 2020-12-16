@@ -110,7 +110,9 @@ class UdBasicTextInputField extends StatelessWidget {
       width: width ?? _design * 200,
       decoration: udContainerBoxDecoration(
         context: context,
-        disableShadow: disableShadow ?? backgroundColor == Colors.transparent ? true : false,
+        disableShadow: disableShadow ?? backgroundColor == Colors.transparent
+            ? true
+            : false,
         borderRadius: borderRadius,
         borderColor: borderColor,
         borderWidth: borderWidth,
@@ -138,12 +140,16 @@ class UdBasicTextInputField extends StatelessWidget {
               style: TextStyle(
                 fontSize: fontSize != null ? fontSize : 16,
                 fontWeight: fontWeight != null ? fontWeight : FontWeight.normal,
-                color: textColor != null ? textColor : DoNotUseThisPackageColors.black,
+                color: textColor != null
+                    ? textColor
+                    : DoNotUseThisPackageColors.black,
               ),
-              textAlign: textAlignment != null ? textAlignment : TextAlign.center,
+              textAlign:
+                  textAlignment != null ? textAlignment : TextAlign.center,
               decoration: InputDecoration(
-                contentPadding:
-                    leftItem == null ? padding ?? EdgeInsets.symmetric(horizontal: _design * 4) : EdgeInsets.all(0),
+                contentPadding: leftItem == null
+                    ? padding ?? EdgeInsets.symmetric(horizontal: _design * 4)
+                    : EdgeInsets.all(0),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(0)),
                   borderSide: BorderSide(

@@ -121,12 +121,14 @@ class UdAppBar extends StatelessWidget implements PreferredSizeWidget {
             decoration: udContainerBoxDecoration(
               context: contextInside,
               disableShadow: disableShadow,
-              shadowColor: shadowColor ?? DoNotUseThisPackageColors.black.withOpacity(0.1),
+              shadowColor: shadowColor ??
+                  DoNotUseThisPackageColors.black.withOpacity(0.1),
               shadowBlurRadius: shadowBlurRadius,
               shadowOffset: shadowOffset,
               borderRadius: 0,
               shadowSpreadRadius: shadowSpreadRadius,
-              backgroundColor: backgroundColor ?? DoNotUseThisPackageColors.theme,
+              backgroundColor:
+                  backgroundColor ?? DoNotUseThisPackageColors.theme,
               gradient: gradient,
               gradientEnable: gradientEnable,
             ),
@@ -153,20 +155,28 @@ class UdAppBar extends StatelessWidget implements PreferredSizeWidget {
                               )
                             : titleText != null
                                 ? Row(
-                                    mainAxisAlignment: titleAlignment != Alignment.centerLeft
-                                        ? MainAxisAlignment.center
-                                        : MainAxisAlignment.start,
+                                    mainAxisAlignment:
+                                        titleAlignment != Alignment.centerLeft
+                                            ? MainAxisAlignment.center
+                                            : MainAxisAlignment.start,
                                     children: <Widget>[
-                                      titleAlignment != Alignment.centerLeft ? SizedBox.shrink() : _design * 20,
+                                      titleAlignment != Alignment.centerLeft
+                                          ? SizedBox.shrink()
+                                          : _design * 20,
                                       Container(
-                                        width: doNotUseThisHorizontalValue(context: contextInside) * 67,
-                                        alignment: titleAlignment ?? Alignment.center,
+                                        width: doNotUseThisHorizontalValue(
+                                                context: contextInside) *
+                                            67,
+                                        alignment:
+                                            titleAlignment ?? Alignment.center,
                                         child: UdText(
                                           text: titleText,
                                           fontSize: 16,
-                                          color: titleColor ?? DoNotUseThisPackageColors.white,
+                                          color: titleColor ??
+                                              DoNotUseThisPackageColors.white,
                                           alignment: TextAlign.center,
-                                          fontWeight: titleFontWeight ?? FontWeight.w600,
+                                          fontWeight: titleFontWeight ??
+                                              FontWeight.w600,
                                         ),
                                       ),
                                     ],
