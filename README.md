@@ -13,8 +13,6 @@ A flutter package with collection of simplified widgets that will make your appl
 
 - UdCard
 
-- UdAppBar
-
 - UdSvgImage
 
 - UdAssetImage
@@ -40,6 +38,10 @@ A flutter package with collection of simplified widgets that will make your appl
 - UdBasicTextInputField
 
 - udAlert
+
+- UdAppBar
+
+- UdScaffold
 
 
 

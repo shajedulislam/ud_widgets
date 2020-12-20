@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'dart:io';
 import '../../constants/colors.dart';
 import '../../functions/design.dart';
@@ -92,18 +91,17 @@ class UdAppBar extends StatelessWidget implements PreferredSizeWidget {
               ? height != null
                   ? Platform.isIOS
                       ? height
-                      : height - doNotUseThisDesignValue(context: context) * 20
+                      : MediaQuery.of(context).padding.top +
+                          height -
+                          doNotUseThisDesignValue(context: context) * 20
                   : Platform.isIOS
-                      ? doNotUseThisDesignValue(context: context) * 105
-                      : doNotUseThisDesignValue(context: context) * 85
+                      ? doNotUseThisDesignValue(context: context) * 106
+                      : MediaQuery.of(context).padding.top +
+                          doNotUseThisDesignValue(context: context) * 55
               : 0,
         );
   @override
   Widget build(BuildContext contextInside) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(
-      statusBarColor: Colors.white,
-      statusBarBrightness: Brightness.dark,
-    ));
     if (context == null) {
       print("==UD==> Please provide [ context ] for [ UdAppBar ]");
     }
@@ -113,10 +111,10 @@ class UdAppBar extends StatelessWidget implements PreferredSizeWidget {
             height: height != null
                 ? Platform.isIOS
                     ? height
-                    : height - _design * 20
+                    : MediaQuery.of(context).padding.top + height - _design * 20
                 : Platform.isIOS
-                    ? _design * 105
-                    : _design * 85,
+                    ? _design * 106
+                    : MediaQuery.of(context).padding.top + _design * 55,
             width: double.infinity,
             decoration: udContainerBoxDecoration(
               context: contextInside,
