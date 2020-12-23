@@ -1,7 +1,7 @@
 library ud_widgets;
 
+export 'package:ud_widgets/constants/colors.dart';
 export 'package:ud_widgets/widgets/decorations/container_box_decoration.dart';
-
 export 'package:ud_widgets/widgets/texts/text.dart';
 export 'package:ud_widgets/widgets/appbars/appbar.dart';
 export 'package:ud_widgets/widgets/buttons/basic_button.dart';
@@ -18,6 +18,6 @@ export 'package:ud_widgets/widgets/images/byte_image.dart';
 export 'package:ud_widgets/widgets/images/base64_image.dart';
 export 'package:ud_widgets/widgets/input/basic_text_input_field.dart';
 export 'package:ud_widgets/widgets/alerts/alert.dart';
-
 export 'package:ud_widgets/widgets/shapes/shape.dart';
-export 'package:ud_widgets/constants/colors.dart';
+export 'package:ud_widgets/widgets/divider/line.dart';
+export 'package:ud_widgets/widgets/shapes/radius_clip.dart';

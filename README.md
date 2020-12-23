@@ -37,6 +37,10 @@ A flutter package with collection of simplified widgets that will make your appl
 
 - UdBasicTextInputField
 
+- UdStraightLine
+
+- UdRadiusClip
+
 - udAlert
 
 - UdAppBar
