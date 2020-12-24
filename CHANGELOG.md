@@ -1,3 +1,7 @@
+## 0.1.0
+
+* color parameter added in UdSvgImage
+
 ## 0.0.9
 
 * UdStraightLine and UdRadiusClip added, README.md updated

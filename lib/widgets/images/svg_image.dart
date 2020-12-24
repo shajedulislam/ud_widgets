@@ -6,6 +6,7 @@ class UdSvgImage extends StatelessWidget {
   final double height;
   final double width;
   final String imagePath;
+  final Color color;
   final BoxFit boxFit;
   final Alignment imageAlignment;
   final double borderRadius;
@@ -15,6 +16,7 @@ class UdSvgImage extends StatelessWidget {
     this.height,
     this.width,
     this.imagePath,
+    this.color,
     this.boxFit,
     this.imageAlignment,
     this.borderRadius,
@@ -43,6 +45,7 @@ class UdSvgImage extends StatelessWidget {
             ),
             child: SvgPicture.asset(
               imagePath,
+              color: color,
               fit: boxFit ?? BoxFit.contain,
               alignment: imageAlignment ?? Alignment.center,
               height: height ?? _design * 50,
