@@ -154,13 +154,13 @@ class UdAppBar extends StatelessWidget implements PreferredSizeWidget {
                             : titleText != null
                                 ? Row(
                                     mainAxisAlignment:
-                                        titleAlignment != Alignment.centerLeft
-                                            ? MainAxisAlignment.center
-                                            : MainAxisAlignment.start,
+                                        titleAlignment == Alignment.centerLeft
+                                            ? MainAxisAlignment.start
+                                            : titleAlignment ==
+                                                    Alignment.centerRight
+                                                ? MainAxisAlignment.end
+                                                : MainAxisAlignment.center,
                                     children: <Widget>[
-                                      titleAlignment != Alignment.centerLeft
-                                          ? SizedBox.shrink()
-                                          : _design * 20,
                                       Container(
                                         width: doNotUseThisHorizontalValue(
                                                 context: contextInside) *

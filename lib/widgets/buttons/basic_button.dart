@@ -49,7 +49,7 @@ class UdBasicButton extends StatelessWidget {
   Widget build(BuildContext context) {
     double _design = doNotUseThisDesignValue(context: context);
     return Container(
-      height: height ?? _design * 40,
+      height: height ?? _design * 45,
       width: width ?? _design * 100,
       decoration: disableShadow != true
           ? udContainerBoxDecoration(

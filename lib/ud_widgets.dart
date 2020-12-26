@@ -21,3 +21,4 @@ export 'package:ud_widgets/widgets/alerts/alert.dart';
 export 'package:ud_widgets/widgets/shapes/shape.dart';
 export 'package:ud_widgets/widgets/divider/line.dart';
 export 'package:ud_widgets/widgets/shapes/radius_clip.dart';
+export 'package:ud_widgets/widgets/scaffold/scaffold.dart';

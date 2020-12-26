@@ -1,3 +1,7 @@
+## 0.1.1
+
+* UdAppBar bug fixed and example updated
+
 ## 0.1.0
 
 * color parameter added in UdSvgImage
