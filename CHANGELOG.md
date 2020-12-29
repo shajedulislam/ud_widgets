@@ -1,3 +1,7 @@
+## 0.1.2
+
+* color parameter added in UdSvgButton and UdBasicTextInputField updated
+
 ## 0.1.1
 
 * UdAppBar bug fixed and example updated

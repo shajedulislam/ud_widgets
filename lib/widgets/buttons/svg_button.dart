@@ -7,6 +7,7 @@ class UdSvgButton extends StatelessWidget {
   final String imagePath;
   final double height;
   final double width;
+  final Color color;
   final EdgeInsets padding;
   final Function function;
 
@@ -14,6 +15,7 @@ class UdSvgButton extends StatelessWidget {
     this.imagePath,
     this.height,
     this.width,
+    this.color,
     this.padding,
     this.function,
   });
@@ -39,6 +41,7 @@ class UdSvgButton extends StatelessWidget {
               padding: padding ?? EdgeInsets.all(_design * 0.5),
               child: SvgPicture.asset(
                 imagePath,
+                color: color,
                 fit: BoxFit.contain,
                 alignment: Alignment.center,
                 height: height ?? _design * 20,

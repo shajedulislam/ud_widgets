@@ -124,51 +124,55 @@ class UdBasicTextInputField extends StatelessWidget {
             )
           : null,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           leftItem ?? SizedBox.shrink(),
-          SizedBox(width: _design * 4),
           Expanded(
-            child: TextField(
-              onTap: onTap ?? () {},
-              onChanged: (text) {
-                onChanged(text);
-              },
-              controller: controller,
-              focusNode: focusNode,
-              style: TextStyle(
-                fontSize: fontSize != null ? fontSize : 16,
-                fontWeight: fontWeight != null ? fontWeight : FontWeight.normal,
-                color: textColor != null
-                    ? textColor
-                    : DoNotUseThisPackageColors.black,
-              ),
-              textAlign:
-                  textAlignment != null ? textAlignment : TextAlign.center,
-              decoration: InputDecoration(
-                contentPadding: leftItem == null
-                    ? padding ?? EdgeInsets.symmetric(horizontal: _design * 4)
-                    : EdgeInsets.all(0),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(0)),
-                  borderSide: BorderSide(
-                    width: 0,
-                    color: Colors.transparent,
-                  ),
+            child: Padding(
+              padding: EdgeInsets.all(0),
+              child: TextField(
+                onTap: onTap ?? () {},
+                onChanged: (text) {
+                  onChanged(text);
+                },
+                controller: controller,
+                focusNode: focusNode,
+                style: TextStyle(
+                  fontSize: fontSize != null ? fontSize : 16,
+                  fontWeight:
+                      fontWeight != null ? fontWeight : FontWeight.normal,
+                  color: textColor != null
+                      ? textColor
+                      : DoNotUseThisPackageColors.black,
                 ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(0)),
-                  borderSide: BorderSide(
-                    width: 0,
-                    color: Colors.transparent,
+                textAlign:
+                    textAlignment != null ? textAlignment : TextAlign.center,
+                decoration: InputDecoration(
+                  contentPadding: padding ??
+                      EdgeInsets.only(
+                        left: _design * 4,
+                      ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(0)),
+                    borderSide: BorderSide(
+                      width: 0,
+                      color: Colors.transparent,
+                    ),
                   ),
-                ),
-                filled: false,
-                hintText: hintText ?? "Hint Text",
-                hintStyle: TextStyle(
-                  color: hintTextColor ?? Colors.black38,
-                  fontSize: fontSize ?? 14,
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(0)),
+                    borderSide: BorderSide(
+                      width: 0,
+                      color: Colors.transparent,
+                    ),
+                  ),
+                  filled: false,
+                  hintText: hintText ?? "Hint Text",
+                  hintStyle: TextStyle(
+                    color: hintTextColor ?? Colors.black38,
+                    fontSize: fontSize ?? 14,
+                  ),
                 ),
               ),
             ),
