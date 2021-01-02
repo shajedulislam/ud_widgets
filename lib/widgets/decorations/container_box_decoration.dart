@@ -7,6 +7,7 @@ BoxDecoration udContainerBoxDecoration({
   @required BuildContext context,
   Color backgroundColor,
   double borderRadius,
+  BorderRadius customBorderRadius,
   Color borderColor,
   double borderWidth,
   bool disableShadow,
@@ -38,9 +39,10 @@ BoxDecoration udContainerBoxDecoration({
             width: borderWidth != null ? borderWidth : 1,
           )
         : null,
-    borderRadius: BorderRadius.all(
-      Radius.circular(borderRadius ?? _design * 2),
-    ),
+    borderRadius: customBorderRadius ??
+        BorderRadius.all(
+          Radius.circular(borderRadius ?? _design * 2),
+        ),
     boxShadow: disableShadow != true
         ? [
             BoxShadow(

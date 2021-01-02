@@ -55,6 +55,7 @@ class UdBasicButton extends StatelessWidget {
           ? udContainerBoxDecoration(
               context: context,
               borderRadius: borderRadius,
+              customBorderRadius: customBorderRadius,
               shadowBlurRadius: shadowBlurRadius,
               disableShadow:
                   disableShadow ?? backgroundColor == Colors.transparent

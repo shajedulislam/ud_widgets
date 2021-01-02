@@ -11,6 +11,8 @@ class UdCard extends StatelessWidget {
 
   final double borderRadius;
 
+  final BorderRadius customBorderRadius;
+
   final double paddingVertical;
 
   final double paddingHorizontal;
@@ -64,6 +66,7 @@ class UdCard extends StatelessWidget {
     this.borderColor,
     this.borderWidth,
     this.borderRadius,
+    this.customBorderRadius,
     this.disableShadow,
     this.shadowColor,
     this.shadowOffset,
@@ -90,6 +93,7 @@ class UdCard extends StatelessWidget {
           gradientEnable: gradientEnable,
           borderColor: borderColor,
           borderRadius: borderRadius,
+          customBorderRadius: customBorderRadius,
           borderWidth: borderWidth,
           disableShadow: disableShadow ?? backgroundColor == Colors.transparent
               ? true
