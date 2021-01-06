@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import '../../functions/design.dart';
 import '../../ud_widgets.dart';
 
-Future<void> udAlert({
+/// To show some information in an alert you can use this function. It can not be used for Widget type return. For that you can use [ UdAlertWidget ]
+Future<void> udAlertFunction({
   @required BuildContext context,
   String title,
   String titleFontSize,

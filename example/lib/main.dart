@@ -27,9 +27,9 @@ class UdWidgetsDemo extends StatelessWidget {
         child: Center(
           child: Column(
             children: [
-              SizedBox(height: 20),
+              UdGapY(value: 20),
               UdText(text: "Text"),
-              SizedBox(height: 30),
+              UdGapY(value: 30),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -37,7 +37,7 @@ class UdWidgetsDemo extends StatelessWidget {
                     size: 50,
                     child: UdText(text: 'Shape', color: Colors.white),
                   ),
-                  SizedBox(width: 20),
+                  UdGapX(value: 20),
                   UdShape(
                     size: 50,
                     radius: 4,
@@ -45,16 +45,16 @@ class UdWidgetsDemo extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 30),
+              UdGapY(value: 30),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   UdRadioButton(title: "Radio Button"),
-                  SizedBox(width: 20),
+                  UdGapX(value: 20),
                   UdRadioButton(title: "Radio Button", borderRadius: 2),
                 ],
               ),
-              SizedBox(height: 30),
+              UdGapY(value: 30),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -64,15 +64,18 @@ class UdWidgetsDemo extends StatelessWidget {
                     height: 100,
                     borderRadius: 50,
                   ),
-                  SizedBox(width: 20),
-                  UdNetworkImage(
-                    width: 100,
-                    height: 100,
-                    httpPath: "https://googleflutter.com/sample_image.jpg",
+                  UdGapX(value: 20),
+                  UdTapper(
+                    onTap: () {},
+                    child: UdNetworkImage(
+                      width: 100,
+                      height: 100,
+                      httpPath: "https://googleflutter.com/sample_image.jpg",
+                    ),
                   ),
                 ],
               ),
-              SizedBox(height: 30),
+              UdGapY(value: 30),
               UdCard(
                 width: 315,
                 borderRadius: 4,
@@ -86,7 +89,7 @@ class UdWidgetsDemo extends StatelessWidget {
                         fontSize: 20,
                         color: Colors.white,
                       ),
-                      SizedBox(height: 20),
+                      UdGapY(value: 20),
                       UdBasicTextInputField(
                         width: double.infinity,
                         hintText: "Text Input Field",
@@ -100,13 +103,13 @@ class UdWidgetsDemo extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 30),
+              UdGapY(value: 30),
               UdBasicButton(
                 title: "Button",
                 width: 315,
                 borderRadius: 4,
                 onTap: () {
-                  udAlert(
+                  udAlertFunction(
                     context: context,
                     title: "Hello",
                     message: "This is a dialog message!",

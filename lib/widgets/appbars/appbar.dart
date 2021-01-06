@@ -9,11 +9,16 @@ class UdAppBar extends StatelessWidget implements PreferredSizeWidget {
   final BuildContext context;
   final double height;
   final Color backgroundColor;
+
+  /// If you do not need any custom widget and just need a title then you can use this parameter.
   final String titleText;
   final Color titleColor;
   final double titleFontSize;
   final FontWeight titleFontWeight;
   final Alignment titleAlignment;
+  final double titleWidth;
+  final double titlePaddingLeft;
+  final double titlePaddingRight;
 
   /// If you want any customization or widget in the left side then use this parameter.
   final Widget customLeft;
@@ -24,8 +29,8 @@ class UdAppBar extends StatelessWidget implements PreferredSizeWidget {
   /// If you want any customization or widget in the right side then use this parameter.
   final Widget customRight;
 
-  final double paddingLeft;
-  final double paddingright;
+  final double appBarPaddingLeft;
+  final double appBarPaddingright;
 
   /// By default this AppBar has a shadow. If you do not need shadow then you can pass `false` here to disable shadow.
   final bool disableShadow;
@@ -73,12 +78,15 @@ class UdAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.titleFontSize,
     this.titleFontWeight,
     this.titleAlignment,
+    this.titleWidth,
+    this.titlePaddingLeft,
+    this.titlePaddingRight,
     this.customDesign,
     this.customLeft,
     this.customMiddle,
     this.customRight,
-    this.paddingLeft,
-    this.paddingright,
+    this.appBarPaddingLeft,
+    this.appBarPaddingright,
     this.disableShadow,
     this.shadowBlurRadius,
     this.shadowColor,
@@ -133,8 +141,8 @@ class UdAppBar extends StatelessWidget implements PreferredSizeWidget {
             child: customDesign ??
                 Container(
                   padding: EdgeInsets.only(
-                    left: paddingLeft ?? _design * 16,
-                    right: paddingright ?? _design * 16,
+                    left: appBarPaddingLeft ?? _design * 16,
+                    right: appBarPaddingright ?? _design * 16,
                   ),
                   child: SafeArea(
                     top: true,
@@ -153,6 +161,8 @@ class UdAppBar extends StatelessWidget implements PreferredSizeWidget {
                               )
                             : titleText != null
                                 ? Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     mainAxisAlignment:
                                         titleAlignment == Alignment.centerLeft
                                             ? MainAxisAlignment.start
@@ -161,10 +171,18 @@ class UdAppBar extends StatelessWidget implements PreferredSizeWidget {
                                                 ? MainAxisAlignment.end
                                                 : MainAxisAlignment.center,
                                     children: <Widget>[
+                                      SizedBox(
+                                        width: titleAlignment ==
+                                                Alignment.centerLeft
+                                            ? titlePaddingLeft ?? _design * 40
+                                            : 0,
+                                      ),
                                       Container(
-                                        width: doNotUseThisHorizontalValue(
-                                                context: contextInside) *
-                                            67,
+                                        width: titleWidth ??
+                                            doNotUseThisHorizontalValue(
+                                                  context: contextInside,
+                                                ) *
+                                                60,
                                         alignment:
                                             titleAlignment ?? Alignment.center,
                                         child: UdText(
@@ -174,8 +192,14 @@ class UdAppBar extends StatelessWidget implements PreferredSizeWidget {
                                               DoNotUseThisPackageColors.white,
                                           alignment: TextAlign.center,
                                           fontWeight: titleFontWeight ??
-                                              FontWeight.w600,
+                                              FontWeight.w500,
                                         ),
+                                      ),
+                                      SizedBox(
+                                        width: titleAlignment ==
+                                                Alignment.centerRight
+                                            ? titlePaddingRight ?? _design * 55
+                                            : 0,
                                       ),
                                     ],
                                   )

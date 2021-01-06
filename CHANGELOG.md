@@ -1,3 +1,11 @@
+## 0.1.4
+
+* Bug fixed
+* UdGapX and UdGapY widgets added to use for gaps or spaces
+* UdAlertWidget and udAlertFunction alerts added
+* UdTapper button added to do something on tap with any widgets
+* UdBasicButton and UdAppBar updated
+
 ## 0.1.3
 
 * Bug fixing

@@ -7,11 +7,12 @@ class UdBasicButton extends StatelessWidget {
   final double height;
   final Color backgroundColor;
   final String title;
-  final double fontSize;
-  final Color fontColor;
-  final FontWeight fontWeight;
+  final double titleFontSize;
+  final Color titleColor;
+  final FontWeight titleFontWeight;
   final double paddingArroundTitle;
   final double borderRadius;
+  final double borderWidth;
   final BorderRadius customBorderRadius;
   final Color borderColor;
   final Color splashColor;
@@ -29,11 +30,12 @@ class UdBasicButton extends StatelessWidget {
     this.height,
     this.backgroundColor,
     this.title,
-    this.fontSize,
-    this.fontColor,
-    this.fontWeight,
+    this.titleFontSize,
+    this.titleColor,
+    this.titleFontWeight,
     this.paddingArroundTitle,
     this.borderColor,
+    this.borderWidth,
     this.borderRadius,
     this.customBorderRadius,
     this.shadowColor,
@@ -51,23 +53,17 @@ class UdBasicButton extends StatelessWidget {
     return Container(
       height: height ?? _design * 45,
       width: width ?? _design * 100,
-      decoration: disableShadow != true
-          ? udContainerBoxDecoration(
-              context: context,
-              borderRadius: borderRadius,
-              customBorderRadius: customBorderRadius,
-              shadowBlurRadius: shadowBlurRadius,
-              disableShadow:
-                  disableShadow ?? backgroundColor == Colors.transparent
-                      ? true
-                      : false,
-              shadowOffset: shadowOffset,
-              shadowColor: shadowColor,
-              shadowSpreadRadius: shadowSpreadRadius,
-              backgroundColor:
-                  backgroundColor ?? DoNotUseThisPackageColors.theme,
-            )
-          : null,
+      decoration: udContainerBoxDecoration(
+        context: context,
+        borderRadius: borderRadius,
+        customBorderRadius: customBorderRadius,
+        shadowBlurRadius: shadowBlurRadius,
+        disableShadow: disableShadow,
+        shadowOffset: shadowOffset,
+        shadowColor: shadowColor,
+        shadowSpreadRadius: shadowSpreadRadius,
+        backgroundColor: backgroundColor ?? DoNotUseThisPackageColors.theme,
+      ),
       child: RaisedButton(
         padding: EdgeInsets.all(
           paddingArroundTitle ?? 0,
@@ -79,7 +75,10 @@ class UdBasicButton extends StatelessWidget {
         highlightElevation: 0,
         splashColor: splashColor ?? Colors.white.withOpacity(0.1),
         shape: RoundedRectangleBorder(
-          side: BorderSide(color: borderColor ?? Colors.transparent),
+          side: BorderSide(
+            color: borderColor ?? Colors.transparent,
+            width: borderWidth ?? 0,
+          ),
           borderRadius: customBorderRadius ??
               BorderRadius.circular(
                 borderRadius ?? _design * 2,
@@ -88,9 +87,9 @@ class UdBasicButton extends StatelessWidget {
         child: customChild ??
             UdText(
               text: title ?? 'Button',
-              color: fontColor ?? Colors.white,
-              fontSize: fontSize ?? 14,
-              fontWeight: fontWeight ?? FontWeight.bold,
+              color: titleColor ?? Colors.white,
+              fontSize: titleFontSize ?? 14,
+              fontWeight: titleFontWeight ?? FontWeight.bold,
               overflow: TextOverflow.ellipsis,
             ),
         onPressed: onTap ?? () {},
