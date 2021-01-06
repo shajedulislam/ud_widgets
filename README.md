@@ -41,13 +41,21 @@ A flutter package with collection of simplified widgets that will make your appl
 
 - UdRadiusClip
 
-- udAlert
+- UdAlertWidget
+
+- udAlertFunction
+
+- UdGapX
+
+- UdGapY
+
+- UdTapper
 
 - UdAppBar
 
 - UdScaffold
 
-
+**Check [example](https://pub.dev/packages/ud_widgets/example) page for code examples**
 
 ## Demo
   
