@@ -1,3 +1,7 @@
+## 0.1.6
+
+* UdBasicButton updated
+
 ## 0.1.5
 
 * README.md updated, [Example page](https://pub.dev/packages/ud_widgets/example) updated

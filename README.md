@@ -55,7 +55,9 @@ A flutter package with collection of simplified widgets that will make your appl
 
 - UdScaffold
 
+
 **Check [example](https://pub.dev/packages/ud_widgets/example) page for code examples**
+
 
 ## Demo
   
