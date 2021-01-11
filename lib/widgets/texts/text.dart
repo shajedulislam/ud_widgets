@@ -8,6 +8,7 @@ class UdText extends StatelessWidget {
   final FontWeight fontWeight;
   final TextOverflow overflow;
   final TextAlign alignment;
+  final int maxLines;
   final TextDecoration decoration;
 
   /// You can use this widget for texts. Inside we are using Text widget but UdText helps you minimizing code.
@@ -17,6 +18,7 @@ class UdText extends StatelessWidget {
     this.color,
     this.fontWeight,
     this.alignment,
+    this.maxLines,
     this.decoration,
     this.overflow,
   });
@@ -26,6 +28,7 @@ class UdText extends StatelessWidget {
       text ?? "Text",
       overflow: overflow,
       textAlign: alignment,
+      maxLines: maxLines ?? null,
       style: TextStyle(
         color: color ?? DoNotUseThisPackageColors.black,
         fontSize: fontSize ?? 14,

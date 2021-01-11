@@ -1,3 +1,7 @@
+## 0.1.7
+
+* UdAppBar title font size issue fixed, max lines parameter added in UdText
+
 ## 0.1.6
 
 * UdBasicButton updated

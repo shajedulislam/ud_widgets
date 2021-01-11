@@ -187,7 +187,7 @@ class UdAppBar extends StatelessWidget implements PreferredSizeWidget {
                                             titleAlignment ?? Alignment.center,
                                         child: UdText(
                                           text: titleText,
-                                          fontSize: 16,
+                                          fontSize: titleFontSize ?? 16,
                                           color: titleColor ??
                                               DoNotUseThisPackageColors.white,
                                           alignment: TextAlign.center,
