@@ -6,9 +6,9 @@ import '../../ud_widgets.dart';
 Future<void> udAlertFunction({
   @required BuildContext context,
   String title,
-  String titleFontSize,
+  double titleFontSize,
   String message,
-  String messageFontSize,
+  double messageFontSize,
   String button1Text,
   double button1FontSize,
   Function button1Function,

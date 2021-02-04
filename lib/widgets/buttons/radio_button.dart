@@ -136,8 +136,8 @@ class UdRadioButton extends StatelessWidget {
                 margin: EdgeInsets.all(innerMargin ?? _design * 2),
                 decoration: BoxDecoration(
                   color: checked == true
-                      ? Colors.transparent
-                      : DoNotUseThisPackageColors.theme,
+                      ? DoNotUseThisPackageColors.theme
+                      : Colors.transparent,
                   borderRadius: BorderRadius.all(
                     Radius.circular(
                       borderRadius != null

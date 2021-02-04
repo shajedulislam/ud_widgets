@@ -51,6 +51,7 @@ class UdBasicTextInputField extends StatelessWidget {
   /// ```
   final ValueChanged<dynamic> onChanged;
   final Function onTap;
+  final Function onEditingComplete;
 
   /// Called when the user taps on the text input field and it returns the index value you passed in the widget.
   ///
@@ -98,6 +99,7 @@ class UdBasicTextInputField extends StatelessWidget {
     this.leftItem,
     this.onChanged,
     this.onTap,
+    this.onEditingComplete,
     this.getIndex,
     this.controller,
     this.focusNode,
@@ -133,6 +135,12 @@ class UdBasicTextInputField extends StatelessWidget {
               padding: EdgeInsets.all(0),
               child: TextField(
                 onTap: onTap ?? () {},
+                onEditingComplete: () {
+                  FocusScope.of(context).unfocus();
+                  if (onEditingComplete != null) {
+                    onEditingComplete();
+                  }
+                },
                 onChanged: (text) {
                   onChanged(text);
                 },

@@ -1,3 +1,19 @@
+## 0.2.1
+
+* UdBasicTextInputField bug fixed
+
+## 0.2.0
+
+* udAlertFunction bug fixed
+
+## 0.1.9
+
+* onEditingComplete action added in UdBasicTextInputField
+
+## 0.1.8
+
+* UdRadioButton bug fixed
+
 ## 0.1.7
 
 * UdAppBar title font size issue fixed, max lines parameter added in UdText
