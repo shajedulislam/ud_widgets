@@ -1,3 +1,11 @@
+## 0.2.3
+
+* UdAppbar responsiveness update
+
+## 0.2.2
+
+* flutter_svg version update
+
 ## 0.2.1
 
 * UdBasicTextInputField bug fixed
