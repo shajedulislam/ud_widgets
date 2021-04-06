@@ -38,6 +38,7 @@ class UdBasicTextInputField extends StatelessWidget {
   final double shadowSpreadRadius;
   final double borderRadius;
   final Widget leftItem;
+  final bool obsecureText;
 
   /// Use this parameter to listen for the changes on every key press.
   ///
@@ -80,6 +81,7 @@ class UdBasicTextInputField extends StatelessWidget {
     this.fontSize,
     this.fontWeight,
     this.textAlignment,
+    this.obsecureText,
     // this.enableDefaultBorder,
     // this.enableFocusBorder,
     // this.borderColorDefault,
@@ -146,6 +148,7 @@ class UdBasicTextInputField extends StatelessWidget {
                 },
                 controller: controller,
                 focusNode: focusNode,
+                obscureText: obsecureText,
                 style: TextStyle(
                   fontSize: fontSize != null ? fontSize : 16,
                   fontWeight:
