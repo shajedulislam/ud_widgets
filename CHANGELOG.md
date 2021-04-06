@@ -1,3 +1,7 @@
+## 0.2.5
+
+* UdBasicTextInputField bug fixed
+
 ## 0.2.4
 
 * Obsecure text option added for UdBasicTextInputField

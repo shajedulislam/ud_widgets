@@ -148,7 +148,7 @@ class UdBasicTextInputField extends StatelessWidget {
                 },
                 controller: controller,
                 focusNode: focusNode,
-                obscureText: obsecureText,
+                obscureText: obsecureText ?? false,
                 style: TextStyle(
                   fontSize: fontSize != null ? fontSize : 16,
                   fontWeight:
