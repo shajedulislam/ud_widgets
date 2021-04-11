@@ -3,22 +3,22 @@ import '../../functions/design.dart';
 import '../../ud_widgets.dart';
 
 class UdRadioButton extends StatelessWidget {
-  final double size;
+  final double? size;
 
   /// It makes space inside when button is checked
-  final double innerMargin;
-  final double borderRadius;
-  final String title;
-  final double titleFontSize;
-  final Color titleColor;
-  final FontWeight titleWeight;
-  final MainAxisAlignment mainAxisAlignment;
+  final double? innerMargin;
+  final double? borderRadius;
+  final String? title;
+  final double? titleFontSize;
+  final Color? titleColor;
+  final FontWeight? titleWeight;
+  final MainAxisAlignment? mainAxisAlignment;
 
   /// Pass a value to get it on tap and match for checking the radio button.
   final dynamic value;
 
   /// To check on the radio button pass true or false here.
-  final bool checked;
+  final bool? checked;
 
   /// Pass index number if you need it on tap using [ getIndex ] function
   ///
@@ -38,7 +38,7 @@ class UdRadioButton extends StatelessWidget {
   ///   },
   ///  )
   /// ```
-  final int index;
+  final int? index;
 
   /// Called when the user taps on the radio button and it returns the index value you passed in the widget.
   ///
@@ -58,7 +58,7 @@ class UdRadioButton extends StatelessWidget {
   ///   },
   ///  )
   /// ```
-  final ValueChanged<int> getIndex;
+  final ValueChanged<int?>? getIndex;
 
   /// Called when the user taps on the radio button and it returns the value you passed in the widget.
   ///
@@ -76,7 +76,7 @@ class UdRadioButton extends StatelessWidget {
   ///   },
   ///  )
   /// ```
-  final ValueChanged<dynamic> onTap;
+  final ValueChanged<dynamic>? onTap;
 
   /// You can modify this radio button passing values by your choice.
   UdRadioButton({
@@ -104,10 +104,10 @@ class UdRadioButton extends StatelessWidget {
       focusColor: Colors.transparent,
       onTap: () {
         if (getIndex != null) {
-          getIndex(index);
+          getIndex!(index);
         }
         if (onTap != null) {
-          onTap(value);
+          onTap!(value);
         }
       },
       child: Container(
@@ -125,9 +125,9 @@ class UdRadioButton extends StatelessWidget {
                 borderRadius: BorderRadius.all(
                   Radius.circular(
                     borderRadius != null
-                        ? borderRadius
+                        ? borderRadius!
                         : size != null
-                            ? size / 2
+                            ? size! / 2
                             : _design * 8,
                   ),
                 ),
@@ -141,9 +141,9 @@ class UdRadioButton extends StatelessWidget {
                   borderRadius: BorderRadius.all(
                     Radius.circular(
                       borderRadius != null
-                          ? borderRadius
+                          ? borderRadius!
                           : size != null
-                              ? size / 2
+                              ? size! / 2
                               : _design * 8,
                     ),
                   ),

@@ -1,3 +1,7 @@
+## 0.2.6
+
+* Migrated to null safety
+
 ## 0.2.5
 
 * UdBasicTextInputField bug fixed

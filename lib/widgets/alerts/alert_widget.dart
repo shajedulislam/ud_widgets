@@ -3,19 +3,19 @@ import '../../functions/design.dart';
 import '../../ud_widgets.dart';
 
 class UdAlertWidget extends StatelessWidget {
-  final String title;
-  final double titleFontSize;
-  final String message;
-  final double messageFontSize;
-  final String button1Text;
-  final double button1FontSize;
-  final Function button1Function;
-  final String button2Text;
-  final double button2FontSize;
-  final Function button2Function;
-  final double alertBorderRadius;
-  final bool closeAlertOnTapArround;
-  final Color colorAroundTheAlert;
+  final String? title;
+  final double? titleFontSize;
+  final String? message;
+  final double? messageFontSize;
+  final String? button1Text;
+  final double? button1FontSize;
+  final Function? button1Function;
+  final String? button2Text;
+  final double? button2FontSize;
+  final Function? button2Function;
+  final double? alertBorderRadius;
+  final bool? closeAlertOnTapArround;
+  final Color? colorAroundTheAlert;
 
   /// To show some information in an alert you can use this widget. It should be used where the return type is [ Widget ]
   UdAlertWidget({
@@ -104,7 +104,7 @@ class UdAlertWidget extends StatelessWidget {
                     hoverColor: Colors.transparent,
                     highlightColor: Colors.transparent,
                     splashColor: Colors.transparent,
-                    onTap: button1Function,
+                    onTap: button1Function as void Function()?,
                   ),
                   button2Text != null
                       ? InkWell(
@@ -125,7 +125,7 @@ class UdAlertWidget extends StatelessWidget {
                           hoverColor: Colors.transparent,
                           highlightColor: Colors.transparent,
                           splashColor: Colors.transparent,
-                          onTap: button2Function,
+                          onTap: button2Function as void Function()?,
                         )
                       : SizedBox.shrink(),
                 ],

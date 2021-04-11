@@ -4,8 +4,8 @@ import '../../functions/design.dart';
 import '../../ud_widgets.dart';
 
 class UdBasicTextInputField extends StatelessWidget {
-  final double height;
-  final double width;
+  final double? height;
+  final double? width;
 
   /// Pass index number if you need it on tap using [ getIndex ] function
   ///
@@ -20,25 +20,25 @@ class UdBasicTextInputField extends StatelessWidget {
   ///   },
   ///  )
   /// ```
-  final int index;
-  final String hintText;
-  final Color hintTextColor;
-  final double fontSize;
-  final Color textColor;
-  final TextAlign textAlignment;
-  final FontWeight fontWeight;
-  final EdgeInsets padding;
-  final Color backgroundColor;
-  final Color borderColor;
-  final double borderWidth;
-  final bool disableShadow;
-  final Color shadowColor;
-  final Offset shadowOffset;
-  final double shadowBlurRadius;
-  final double shadowSpreadRadius;
-  final double borderRadius;
-  final Widget leftItem;
-  final bool obsecureText;
+  final int? index;
+  final String? hintText;
+  final Color? hintTextColor;
+  final double? fontSize;
+  final Color? textColor;
+  final TextAlign? textAlignment;
+  final FontWeight? fontWeight;
+  final EdgeInsets? padding;
+  final Color? backgroundColor;
+  final Color? borderColor;
+  final double? borderWidth;
+  final bool? disableShadow;
+  final Color? shadowColor;
+  final Offset? shadowOffset;
+  final double? shadowBlurRadius;
+  final double? shadowSpreadRadius;
+  final double? borderRadius;
+  final Widget? leftItem;
+  final bool? obsecureText;
 
   /// Use this parameter to listen for the changes on every key press.
   ///
@@ -50,9 +50,9 @@ class UdBasicTextInputField extends StatelessWidget {
   ///   },
   /// )
   /// ```
-  final ValueChanged<dynamic> onChanged;
-  final Function onTap;
-  final Function onEditingComplete;
+  final ValueChanged<dynamic>? onChanged;
+  final Function? onTap;
+  final Function? onEditingComplete;
 
   /// Called when the user taps on the text input field and it returns the index value you passed in the widget.
   ///
@@ -67,9 +67,9 @@ class UdBasicTextInputField extends StatelessWidget {
   ///   },
   ///  )
   /// ```
-  final ValueChanged<int> getIndex;
-  final FocusNode focusNode;
-  final TextEditingController controller;
+  final ValueChanged<int>? getIndex;
+  final FocusNode? focusNode;
+  final TextEditingController? controller;
 
   UdBasicTextInputField({
     this.height,
@@ -136,15 +136,15 @@ class UdBasicTextInputField extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.all(0),
               child: TextField(
-                onTap: onTap ?? () {},
+                onTap: onTap as void Function()? ?? () {},
                 onEditingComplete: () {
                   FocusScope.of(context).unfocus();
                   if (onEditingComplete != null) {
-                    onEditingComplete();
+                    onEditingComplete!();
                   }
                 },
                 onChanged: (text) {
-                  onChanged(text);
+                  onChanged!(text);
                 },
                 controller: controller,
                 focusNode: focusNode,
@@ -158,7 +158,7 @@ class UdBasicTextInputField extends StatelessWidget {
                       : DoNotUseThisPackageColors.black,
                 ),
                 textAlign:
-                    textAlignment != null ? textAlignment : TextAlign.center,
+                    textAlignment != null ? textAlignment! : TextAlign.center,
                 decoration: InputDecoration(
                   contentPadding: padding ??
                       EdgeInsets.only(

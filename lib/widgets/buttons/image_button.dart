@@ -4,11 +4,11 @@ import '../../ud_widgets.dart';
 
 /// Use UdImageButton when you want only an asset image to work like a button. You can pass image path, its size, padding arround image and a function to execute on tap.
 class UdImageButton extends StatelessWidget {
-  final String imagePath;
-  final Function function;
-  final EdgeInsets padding;
-  final double height;
-  final double width;
+  final String? imagePath;
+  final Function? function;
+  final EdgeInsets? padding;
+  final double? height;
+  final double? width;
 
   UdImageButton({
     this.imagePath,
@@ -45,7 +45,7 @@ class UdImageButton extends StatelessWidget {
                 width: width ?? _design * 20,
               ),
             ),
-            onTap: function,
+            onTap: function as void Function()?,
           )
         : SizedBox.shrink();
   }

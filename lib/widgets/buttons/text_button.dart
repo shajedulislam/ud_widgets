@@ -4,12 +4,12 @@ import '../../ud_widgets.dart';
 
 /// Use UdTextButton when you want only text to work like a button. You can pass button text, its size, weight, color, padding arround text and a function to execute on tap.
 class UdTextButton extends StatelessWidget {
-  final String text;
-  final double fontSize;
-  final Color fontColor;
-  final FontWeight fontWeight;
-  final Function function;
-  final EdgeInsets padding;
+  final String? text;
+  final double? fontSize;
+  final Color? fontColor;
+  final FontWeight? fontWeight;
+  final Function? function;
+  final EdgeInsets? padding;
 
   UdTextButton({
     this.text,
@@ -35,7 +35,7 @@ class UdTextButton extends StatelessWidget {
           fontWeight: fontWeight ?? FontWeight.normal,
         ),
       ),
-      onTap: function,
+      onTap: function as void Function()?,
     );
   }
 }

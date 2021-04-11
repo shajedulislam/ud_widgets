@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import '../../ud_widgets.dart';
 
 class UdText extends StatelessWidget {
-  final String text;
-  final Color color;
-  final double fontSize;
-  final FontWeight fontWeight;
-  final TextOverflow overflow;
-  final TextAlign alignment;
-  final int maxLines;
-  final TextDecoration decoration;
+  final String? text;
+  final Color? color;
+  final double? fontSize;
+  final FontWeight? fontWeight;
+  final TextOverflow? overflow;
+  final TextAlign? alignment;
+  final int? maxLines;
+  final TextDecoration? decoration;
 
   /// You can use this widget for texts. Inside we are using Text widget but UdText helps you minimizing code.
   UdText({

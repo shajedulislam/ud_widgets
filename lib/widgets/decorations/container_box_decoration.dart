@@ -4,19 +4,19 @@ import '../../ud_widgets.dart';
 
 /// Box decoration for container is now more easy with udContainerBoxDecoration. Just check parameters and pass values.
 BoxDecoration udContainerBoxDecoration({
-  @required BuildContext context,
-  Color backgroundColor,
-  double borderRadius,
-  BorderRadius customBorderRadius,
-  Color borderColor,
-  double borderWidth,
-  bool disableShadow,
-  Color shadowColor,
-  Offset shadowOffset,
-  double shadowBlurRadius,
-  double shadowSpreadRadius,
-  bool gradientEnable,
-  Gradient gradient,
+  required BuildContext context,
+  Color? backgroundColor,
+  double? borderRadius,
+  BorderRadius? customBorderRadius,
+  Color? borderColor,
+  double? borderWidth,
+  bool? disableShadow,
+  Color? shadowColor,
+  Offset? shadowOffset,
+  double? shadowBlurRadius,
+  double? shadowSpreadRadius,
+  bool? gradientEnable,
+  Gradient? gradient,
 }) {
   double _design = doNotUseThisDesignValue(context: context);
   return BoxDecoration(
@@ -35,7 +35,7 @@ BoxDecoration udContainerBoxDecoration({
         : null,
     border: borderColor != null
         ? Border.all(
-            color: borderColor ?? Colors.black,
+            color: borderColor,
             width: borderWidth != null ? borderWidth : 1,
           )
         : null,

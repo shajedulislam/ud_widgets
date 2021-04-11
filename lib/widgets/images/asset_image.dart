@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import '../../functions/design.dart';
 
 class UdAssetImage extends StatelessWidget {
-  final double height;
-  final double width;
-  final String imagePath;
-  final BoxFit boxFit;
-  final Alignment imageAlignment;
-  final double borderRadius;
-  final Widget child;
+  final double? height;
+  final double? width;
+  final String? imagePath;
+  final BoxFit? boxFit;
+  final Alignment? imageAlignment;
+  final double? borderRadius;
+  final Widget? child;
 
   /// Using network images are now more easy with UdNetworkImage. Just check parameters and pass values.
   UdAssetImage({
@@ -44,7 +44,7 @@ class UdAssetImage extends StatelessWidget {
               image: DecorationImage(
                 alignment: imageAlignment ?? Alignment.center,
                 fit: boxFit ?? BoxFit.contain,
-                image: AssetImage(imagePath),
+                image: AssetImage(imagePath!),
               ),
             ),
             child: child ?? SizedBox.shrink(),

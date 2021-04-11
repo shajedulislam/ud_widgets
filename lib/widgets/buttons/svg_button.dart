@@ -4,12 +4,12 @@ import '../../functions/design.dart';
 
 /// Use UdSvgButton when you want only an svg image/icon to work like a button. You can pass svg path, its size, padding arround svg and a function to execute on tap.
 class UdSvgButton extends StatelessWidget {
-  final String imagePath;
-  final double height;
-  final double width;
-  final Color color;
-  final EdgeInsets padding;
-  final Function function;
+  final String? imagePath;
+  final double? height;
+  final double? width;
+  final Color? color;
+  final EdgeInsets? padding;
+  final Function? function;
 
   UdSvgButton({
     this.imagePath,
@@ -40,7 +40,7 @@ class UdSvgButton extends StatelessWidget {
             child: Padding(
               padding: padding ?? EdgeInsets.all(_design * 0.5),
               child: SvgPicture.asset(
-                imagePath,
+                imagePath!,
                 color: color,
                 fit: BoxFit.contain,
                 alignment: Alignment.center,
@@ -48,7 +48,7 @@ class UdSvgButton extends StatelessWidget {
                 width: width ?? _design * 20,
               ),
             ),
-            onTap: function,
+            onTap: function as void Function()?,
           )
         : SizedBox.shrink();
   }

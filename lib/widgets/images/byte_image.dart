@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import '../../functions/design.dart';
 
 class UdByteImage extends StatelessWidget {
-  final double height;
-  final double width;
-  final Uint8List bytes;
-  final BoxFit boxFit;
-  final Alignment imageAlignment;
-  final double borderRadius;
-  final Widget child;
+  final double? height;
+  final double? width;
+  final Uint8List? bytes;
+  final BoxFit? boxFit;
+  final Alignment? imageAlignment;
+  final double? borderRadius;
+  final Widget? child;
 
   /// Using byte images are now more easy with UdByteImage. Just check parameters and pass values.
   UdByteImage({
@@ -44,7 +44,7 @@ class UdByteImage extends StatelessWidget {
               image: DecorationImage(
                 fit: boxFit ?? BoxFit.contain,
                 alignment: imageAlignment ?? Alignment.center,
-                image: MemoryImage(bytes),
+                image: MemoryImage(bytes!),
               ),
             ),
             child: child ?? SizedBox.shrink(),

@@ -7,41 +7,41 @@ import '../decorations/container_box_decoration.dart';
 
 class UdAppBar extends StatelessWidget implements PreferredSizeWidget {
   final BuildContext context;
-  final double height;
-  final Color backgroundColor;
+  final double? height;
+  final Color? backgroundColor;
 
   /// If you do not need any custom widget and just need a title then you can use this parameter.
-  final String titleText;
-  final Color titleColor;
-  final double titleFontSize;
-  final FontWeight titleFontWeight;
-  final Alignment titleAlignment;
-  final double titleWidth;
-  final double titlePaddingLeft;
-  final double titlePaddingRight;
+  final String? titleText;
+  final Color? titleColor;
+  final double? titleFontSize;
+  final FontWeight? titleFontWeight;
+  final Alignment? titleAlignment;
+  final double? titleWidth;
+  final double? titlePaddingLeft;
+  final double? titlePaddingRight;
 
   /// If you want any customization or widget in the left side then use this parameter.
-  final Widget customLeft;
+  final Widget? customLeft;
 
   /// If you want any customization or widget in the middle then use this parameter.
-  final Widget customMiddle;
+  final Widget? customMiddle;
 
   /// If you want any customization or widget in the right side then use this parameter.
-  final Widget customRight;
+  final Widget? customRight;
 
-  final double appBarPaddingLeft;
-  final double appBarPaddingright;
+  final double? appBarPaddingLeft;
+  final double? appBarPaddingright;
 
   /// By default this AppBar has a shadow. If you do not need shadow then you can pass `false` here to disable shadow.
-  final bool disableShadow;
+  final bool? disableShadow;
 
-  final Color shadowColor;
-  final Offset shadowOffset;
-  final double shadowBlurRadius;
-  final double shadowSpreadRadius;
+  final Color? shadowColor;
+  final Offset? shadowOffset;
+  final double? shadowBlurRadius;
+  final double? shadowSpreadRadius;
 
   /// If you want the background color of the appbar to be gradient then you have to enable it by passing `true` here. After that you can pass any Gradient widget.
-  final bool gradientEnable;
+  final bool? gradientEnable;
 
   /// Here you can pass your Gradient widget to show gradient color as background of AppBar.
   ///
@@ -58,10 +58,10 @@ class UdAppBar extends StatelessWidget implements PreferredSizeWidget {
   ///   ],
   /// )
   /// ```
-  final LinearGradient gradient;
+  final LinearGradient? gradient;
 
   /// If you want full customization over this appbar widget then use this paramenter.
-  final Widget customDesign;
+  final Widget? customDesign;
 
   @override
   final Size preferredSize;
@@ -70,7 +70,7 @@ class UdAppBar extends StatelessWidget implements PreferredSizeWidget {
   ///
   /// Remember! if you dont want to provide custom height then you must pass the `context`.
   UdAppBar({
-    @required this.context,
+    required this.context,
     this.height,
     this.backgroundColor,
     this.titleText,
@@ -119,7 +119,7 @@ class UdAppBar extends StatelessWidget implements PreferredSizeWidget {
             height: height != null
                 ? Platform.isIOS
                     ? height
-                    : MediaQuery.of(context).padding.top + height - _design * 20
+                    : MediaQuery.of(context).padding.top + height! - _design * 20
                 : Platform.isIOS
                     ? _design * 106
                     : MediaQuery.of(context).padding.top + _design * 55,

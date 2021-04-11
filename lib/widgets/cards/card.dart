@@ -3,39 +3,39 @@ import '../../functions/design.dart';
 import '../../ud_widgets.dart';
 
 class UdCard extends StatelessWidget {
-  final double width;
+  final double? width;
 
-  final double height;
+  final double? height;
 
-  final Color backgroundColor;
+  final Color? backgroundColor;
 
-  final double borderRadius;
+  final double? borderRadius;
 
-  final BorderRadius customBorderRadius;
+  final BorderRadius? customBorderRadius;
 
-  final double paddingVertical;
+  final double? paddingVertical;
 
-  final double paddingHorizontal;
-
-  /// To show border you must provide `borderColor`.
-  final Color borderColor;
+  final double? paddingHorizontal;
 
   /// To show border you must provide `borderColor`.
-  final double borderWidth;
+  final Color? borderColor;
+
+  /// To show border you must provide `borderColor`.
+  final double? borderWidth;
 
   /// By default this UdCard has a shadow. If you do not need shadow then you can pass `false` here to disable shadow.
-  final bool disableShadow;
+  final bool? disableShadow;
 
-  final Color shadowColor;
+  final Color? shadowColor;
 
-  final Offset shadowOffset;
+  final Offset? shadowOffset;
 
-  final double shadowBlurRadius;
+  final double? shadowBlurRadius;
 
-  final double shadowSpreadRadius;
+  final double? shadowSpreadRadius;
 
   /// If you want the background color of the card to be gradient then you have to enable it by passing `true` here. After that you can pass any Gradient widget.
-  final bool gradientEnable;
+  final bool? gradientEnable;
 
   /// Here you can pass your Gradient widget to show gradient color as background of UdCard.
   ///
@@ -52,9 +52,9 @@ class UdCard extends StatelessWidget {
   ///   ],
   /// )
   /// ```
-  final Gradient gradient;
+  final Gradient? gradient;
 
-  final Widget child;
+  final Widget? child;
 
   /// UdCard is simplified and very easy to use when you need a card design. We provided possible parameters for you so that you can design it on your way.
   UdCard({

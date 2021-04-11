@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import '../../functions/design.dart';
 
 class UdNetworkImage extends StatelessWidget {
-  final double height;
-  final double width;
-  final String httpPath;
-  final Map<String, String> headers;
-  final double scale;
-  final BoxFit boxFit;
-  final Alignment imageAlignment;
-  final double borderRadius;
-  final Widget child;
+  final double? height;
+  final double? width;
+  final String? httpPath;
+  final Map<String, String>? headers;
+  final double? scale;
+  final BoxFit? boxFit;
+  final Alignment? imageAlignment;
+  final double? borderRadius;
+  final Widget? child;
 
   /// Using network images are now more easy with UdNetworkImage. Just check parameters and pass values.
   UdNetworkImage({
@@ -55,12 +55,12 @@ class UdNetworkImage extends StatelessWidget {
                 fit: boxFit ?? BoxFit.contain,
                 image: headers != null && scale != null
                     ? NetworkImage(
-                        httpPath,
+                        httpPath!,
                         headers: headers,
-                        scale: scale,
+                        scale: scale!,
                       )
                     : NetworkImage(
-                        httpPath,
+                        httpPath!,
                       ),
               ),
             ),

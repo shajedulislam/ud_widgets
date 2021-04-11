@@ -3,11 +3,11 @@ import '../../functions/design.dart';
 import '../../constants/colors.dart';
 
 class UdShape extends StatelessWidget {
-  final double size;
-  final double radius;
-  final Color color;
-  final Alignment childAlignment;
-  final Widget child;
+  final double? size;
+  final double? radius;
+  final Color? color;
+  final Alignment? childAlignment;
+  final Widget? child;
 
   /// If you need widget like circle shape or square shape then you can use this widget. It can contain a child also.
   UdShape({

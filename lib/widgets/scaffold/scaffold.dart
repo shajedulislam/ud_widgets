@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class UdScaffold extends StatelessWidget {
-  final PreferredSizeWidget appBar;
-  final Widget body;
-  final Widget bottomNavigationBar;
-  final Widget drawer;
-  final Color backgroundColor;
+  final PreferredSizeWidget? appBar;
+  final Widget? body;
+  final Widget? bottomNavigationBar;
+  final Widget? drawer;
+  final Color? backgroundColor;
 
   /// To change the status bar / tool bar color in android mobiles, use this parameter.
-  final Color statusBarColorAndroid;
+  final Color? statusBarColorAndroid;
 
   /// You can change status bar / tool bar text and icon color using this parameter.
-  final Brightness statusBarItemsColor;
-  final bool resizeToAvoidBottomInset;
+  final Brightness? statusBarItemsColor;
+  final bool? resizeToAvoidBottomInset;
 
   /// UdScaffold uses flutter Scaffold but we added more option for you.
   UdScaffold({

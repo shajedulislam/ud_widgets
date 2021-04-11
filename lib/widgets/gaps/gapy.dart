@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class UdGapY extends StatelessWidget {
-  final double value;
+  final double? value;
 
   ///Use this widget if you need to provide vertical gap or space anywhere
   UdGapY({this.value});

@@ -4,20 +4,20 @@ import '../../ud_widgets.dart';
 
 /// To show some information in an alert you can use this function. It can not be used for Widget type return. For that you can use [ UdAlertWidget ]
 Future<void> udAlertFunction({
-  @required BuildContext context,
-  String title,
-  double titleFontSize,
-  String message,
-  double messageFontSize,
-  String button1Text,
-  double button1FontSize,
-  Function button1Function,
-  String button2Text,
-  double button2FontSize,
-  Function button2Function,
-  double alertBorderRadius,
-  bool closeAlertOnTapArround,
-  Color colorAroundTheAlert,
+  required BuildContext context,
+  String? title,
+  double? titleFontSize,
+  String? message,
+  double? messageFontSize,
+  String? button1Text,
+  double? button1FontSize,
+  Function? button1Function,
+  String? button2Text,
+  double? button2FontSize,
+  Function? button2Function,
+  double? alertBorderRadius,
+  bool? closeAlertOnTapArround,
+  Color? colorAroundTheAlert,
 }) async {
   return showDialog<void>(
     context: context,
@@ -94,7 +94,7 @@ Future<void> udAlertFunction({
                       hoverColor: Colors.transparent,
                       highlightColor: Colors.transparent,
                       splashColor: Colors.transparent,
-                      onTap: button1Function,
+                      onTap: button1Function as void Function()?,
                     ),
                     button2Text != null
                         ? InkWell(
@@ -104,7 +104,7 @@ Future<void> udAlertFunction({
                               height: _design * 30,
                               alignment: Alignment.center,
                               child: UdText(
-                                text: button2Text ?? "button 2",
+                                text: button2Text,
                                 color: DoNotUseThisPackageColors.black
                                     .withOpacity(0.7),
                                 fontSize: button2FontSize ?? 16,
@@ -115,7 +115,7 @@ Future<void> udAlertFunction({
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             splashColor: Colors.transparent,
-                            onTap: button2Function,
+                            onTap: button2Function as void Function()?,
                           )
                         : SizedBox.shrink(),
                   ],

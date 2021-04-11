@@ -3,9 +3,9 @@ import '../../constants/colors.dart';
 import '../../functions/design.dart';
 
 class UdStraightLine extends StatelessWidget {
-  final Color color;
-  final double height;
-  final double width;
+  final Color? color;
+  final double? height;
+  final double? width;
 
   UdStraightLine({this.height, this.width, this.color});
 

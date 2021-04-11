@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 import '../../ud_widgets.dart';
 
 class UdBase64Image extends StatelessWidget {
-  final double height;
-  final double width;
+  final double? height;
+  final double? width;
 
   /// To show image of base64 encoded byte then you can pass the string here.
-  final String base64bytes;
-  final BoxFit boxFit;
-  final Alignment imageAlignment;
-  final double borderRadius;
-  final Widget child;
+  final String? base64bytes;
+  final BoxFit? boxFit;
+  final Alignment? imageAlignment;
+  final double? borderRadius;
+  final Widget? child;
 
   /// Using base64 encoded byte images are now more easy with UdBase64Image. Just check parameters and pass values.
   UdBase64Image({
@@ -38,7 +38,7 @@ class UdBase64Image extends StatelessWidget {
         ? UdByteImage(
             height: height,
             width: width,
-            bytes: base64Decode(base64bytes),
+            bytes: base64Decode(base64bytes!),
             imageAlignment: imageAlignment,
             borderRadius: borderRadius,
             boxFit: boxFit,

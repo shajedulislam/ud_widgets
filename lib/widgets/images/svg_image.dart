@@ -3,13 +3,13 @@ import 'package:flutter_svg/svg.dart';
 import '../../functions/design.dart';
 
 class UdSvgImage extends StatelessWidget {
-  final double height;
-  final double width;
-  final String imagePath;
-  final Color color;
-  final BoxFit boxFit;
-  final Alignment imageAlignment;
-  final double borderRadius;
+  final double? height;
+  final double? width;
+  final String? imagePath;
+  final Color? color;
+  final BoxFit? boxFit;
+  final Alignment? imageAlignment;
+  final double? borderRadius;
 
   /// Using svg images are now more easy with UdSvgImage. Just check parameters and pass values.
   UdSvgImage({
@@ -44,7 +44,7 @@ class UdSvgImage extends StatelessWidget {
               ),
             ),
             child: SvgPicture.asset(
-              imagePath,
+              imagePath!,
               color: color,
               fit: boxFit ?? BoxFit.contain,
               alignment: imageAlignment ?? Alignment.center,
