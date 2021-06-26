@@ -1,3 +1,7 @@
+## 0.2.7
+
+* Line height added for UdText
+
 ## 0.2.6
 
 * Migrated to null safety

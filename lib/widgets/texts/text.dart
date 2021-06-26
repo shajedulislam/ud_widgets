@@ -7,6 +7,7 @@ class UdText extends StatelessWidget {
   final double? fontSize;
   final FontWeight? fontWeight;
   final TextOverflow? overflow;
+  final double? lineheight;
   final TextAlign? alignment;
   final int? maxLines;
   final TextDecoration? decoration;
@@ -18,6 +19,7 @@ class UdText extends StatelessWidget {
     this.color,
     this.fontWeight,
     this.alignment,
+    this.lineheight,
     this.maxLines,
     this.decoration,
     this.overflow,
@@ -30,6 +32,7 @@ class UdText extends StatelessWidget {
       textAlign: alignment,
       maxLines: maxLines ?? null,
       style: TextStyle(
+        height: lineheight ?? null,
         color: color ?? DoNotUseThisPackageColors.black,
         fontSize: fontSize ?? 14,
         fontWeight: fontWeight ?? FontWeight.w400,
