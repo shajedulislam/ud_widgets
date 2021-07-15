@@ -9,6 +9,7 @@ class UdImageButton extends StatelessWidget {
   final EdgeInsets? padding;
   final double? height;
   final double? width;
+  final bool? skipTraversal;
 
   UdImageButton({
     this.imagePath,
@@ -16,6 +17,7 @@ class UdImageButton extends StatelessWidget {
     this.width,
     this.padding,
     this.function,
+    this.skipTraversal,
   });
   @override
   Widget build(BuildContext context) {
@@ -32,6 +34,7 @@ class UdImageButton extends StatelessWidget {
     }
     return imagePath != null && imagePath != ""
         ? InkWell(
+            focusNode: FocusNode(skipTraversal: skipTraversal ?? true),
             splashColor: Colors.transparent,
             highlightColor: Colors.transparent,
             focusColor: Colors.transparent,

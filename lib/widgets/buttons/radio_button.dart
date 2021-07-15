@@ -13,6 +13,7 @@ class UdRadioButton extends StatelessWidget {
   final Color? titleColor;
   final FontWeight? titleWeight;
   final MainAxisAlignment? mainAxisAlignment;
+  final bool? skipTraversal;
 
   /// Pass a value to get it on tap and match for checking the radio button.
   final dynamic value;
@@ -79,26 +80,27 @@ class UdRadioButton extends StatelessWidget {
   final ValueChanged<dynamic>? onTap;
 
   /// You can modify this radio button passing values by your choice.
-  UdRadioButton({
-    this.size,
-    this.innerMargin,
-    this.borderRadius,
-    this.title,
-    this.titleFontSize,
-    this.titleColor,
-    this.titleWeight,
-    this.mainAxisAlignment,
-    this.checked,
-    this.value,
-    this.index,
-    this.onTap,
-    this.getIndex,
-  });
+  UdRadioButton(
+      {this.size,
+      this.innerMargin,
+      this.borderRadius,
+      this.title,
+      this.titleFontSize,
+      this.titleColor,
+      this.titleWeight,
+      this.mainAxisAlignment,
+      this.checked,
+      this.value,
+      this.index,
+      this.onTap,
+      this.getIndex,
+      this.skipTraversal});
 
   @override
   Widget build(BuildContext context) {
     double _design = doNotUseThisDesignValue(context: context);
     return InkWell(
+      focusNode: FocusNode(skipTraversal: skipTraversal ?? true),
       splashColor: Colors.transparent,
       highlightColor: Colors.transparent,
       focusColor: Colors.transparent,

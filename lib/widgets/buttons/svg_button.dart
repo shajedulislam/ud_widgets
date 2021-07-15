@@ -10,6 +10,7 @@ class UdSvgButton extends StatelessWidget {
   final Color? color;
   final EdgeInsets? padding;
   final Function? function;
+  final bool? skipTraversal;
 
   UdSvgButton({
     this.imagePath,
@@ -18,6 +19,7 @@ class UdSvgButton extends StatelessWidget {
     this.color,
     this.padding,
     this.function,
+    this.skipTraversal,
   });
   @override
   Widget build(BuildContext context) {
@@ -34,6 +36,7 @@ class UdSvgButton extends StatelessWidget {
     }
     return imagePath != null && imagePath != ""
         ? InkWell(
+            focusNode: FocusNode(skipTraversal: skipTraversal ?? true),
             splashColor: Colors.transparent,
             highlightColor: Colors.transparent,
             focusColor: Colors.transparent,

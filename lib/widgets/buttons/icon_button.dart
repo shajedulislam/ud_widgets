@@ -6,12 +6,19 @@ class UdIconButton extends StatelessWidget {
   final Icon? child;
   final EdgeInsets? padding;
   final Function? function;
+  final bool? skipTraversal;
 
-  UdIconButton({this.child, this.padding, this.function});
+  UdIconButton({
+    this.child,
+    this.padding,
+    this.function,
+    this.skipTraversal,
+  });
   @override
   Widget build(BuildContext context) {
     double _design = doNotUseThisDesignValue(context: context);
     return InkWell(
+      focusNode: FocusNode(skipTraversal: skipTraversal ?? true),
       splashColor: Colors.transparent,
       highlightColor: Colors.transparent,
       focusColor: Colors.transparent,

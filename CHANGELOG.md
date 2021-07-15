@@ -1,3 +1,7 @@
+## 0.3.1
+
+* skipTraversal option added for all tapable widgets
+
 ## 0.3.0
 
 * skipTraversal option added for UdBasicButton

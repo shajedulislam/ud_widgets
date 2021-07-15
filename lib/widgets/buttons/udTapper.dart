@@ -5,11 +5,13 @@ class UdTapper extends StatelessWidget {
   final Widget? child;
   final EdgeInsets? padding;
   final Function? onTap;
+  final bool? skipTraversal;
 
-  UdTapper({this.child, this.padding, this.onTap});
+  UdTapper({this.child, this.padding, this.onTap, this.skipTraversal});
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      focusNode: FocusNode(skipTraversal: skipTraversal ?? true),
       splashColor: Colors.transparent,
       highlightColor: Colors.transparent,
       focusColor: Colors.transparent,

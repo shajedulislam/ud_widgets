@@ -10,6 +10,7 @@ class UdTextButton extends StatelessWidget {
   final FontWeight? fontWeight;
   final Function? function;
   final EdgeInsets? padding;
+  final bool? skipTraversal;
 
   UdTextButton({
     this.text,
@@ -18,11 +19,13 @@ class UdTextButton extends StatelessWidget {
     this.fontWeight,
     this.padding,
     this.function,
+    this.skipTraversal,
   });
   @override
   Widget build(BuildContext context) {
     double _design = doNotUseThisDesignValue(context: context);
     return InkWell(
+      focusNode: FocusNode(skipTraversal: skipTraversal ?? true),
       splashColor: Colors.transparent,
       highlightColor: Colors.transparent,
       focusColor: Colors.transparent,
