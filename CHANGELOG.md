@@ -1,3 +1,7 @@
+## 0.2.9
+
+* onEditingComplete option removed for UdBasicTextInputField
+
 ## 0.2.8
 
 * More parameters added for UdBasicTextInputField

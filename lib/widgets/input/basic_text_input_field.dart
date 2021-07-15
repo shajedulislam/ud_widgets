@@ -146,12 +146,6 @@ class UdBasicTextInputField extends StatelessWidget {
               padding: EdgeInsets.all(0),
               child: TextField(
                 onTap: onTap as void Function()? ?? () {},
-                onEditingComplete: () {
-                  FocusScope.of(context).unfocus();
-                  if (onEditingComplete != null) {
-                    onEditingComplete!();
-                  }
-                },
                 onChanged: (text) {
                   onChanged!(text);
                 },
