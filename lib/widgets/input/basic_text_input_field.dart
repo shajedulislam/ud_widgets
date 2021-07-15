@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import '../../constants/colors.dart';
 import '../../functions/design.dart';
 import '../../ud_widgets.dart';
@@ -39,6 +40,7 @@ class UdBasicTextInputField extends StatelessWidget {
   final double? borderRadius;
   final Widget? leftItem;
   final bool? obsecureText;
+  final bool? readOnly;
 
   /// Use this parameter to listen for the changes on every key press.
   ///
@@ -70,6 +72,9 @@ class UdBasicTextInputField extends StatelessWidget {
   final ValueChanged<int>? getIndex;
   final FocusNode? focusNode;
   final TextEditingController? controller;
+  final List<TextInputFormatter>? textInputFormatters;
+  final TextInputType? textInputType;
+  final TextInputAction? textInputAction;
 
   UdBasicTextInputField({
     this.height,
@@ -82,6 +87,7 @@ class UdBasicTextInputField extends StatelessWidget {
     this.fontWeight,
     this.textAlignment,
     this.obsecureText,
+    this.readOnly,
     // this.enableDefaultBorder,
     // this.enableFocusBorder,
     // this.borderColorDefault,
@@ -105,6 +111,9 @@ class UdBasicTextInputField extends StatelessWidget {
     this.getIndex,
     this.controller,
     this.focusNode,
+    this.textInputFormatters,
+    this.textInputType,
+    this.textInputAction,
   });
   @override
   Widget build(BuildContext context) {
@@ -147,7 +156,11 @@ class UdBasicTextInputField extends StatelessWidget {
                   onChanged!(text);
                 },
                 controller: controller,
+                textInputAction: textInputAction ?? TextInputAction.next,
+                readOnly: readOnly ?? false,
                 focusNode: focusNode,
+                inputFormatters: textInputFormatters,
+                keyboardType: textInputType,
                 obscureText: obsecureText ?? false,
                 style: TextStyle(
                   fontSize: fontSize != null ? fontSize : 16,

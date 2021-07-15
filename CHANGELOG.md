@@ -1,3 +1,7 @@
+## 0.2.8
+
+* More parameters added for UdBasicTextInputField
+
 ## 0.2.7
 
 * Line height added for UdText
