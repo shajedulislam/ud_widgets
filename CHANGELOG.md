@@ -1,3 +1,7 @@
+## 0.3.0
+
+* skipTraversal option added for UdBasicButton
+
 ## 0.2.9
 
 * onEditingComplete option removed for UdBasicTextInputField

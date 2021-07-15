@@ -21,6 +21,7 @@ class UdBasicButton extends StatelessWidget {
   final Offset? shadowOffset;
   final double? shadowBlurRadius;
   final double? shadowSpreadRadius;
+  final bool? skipTraversal;
   final Function? onTap;
   final Widget? customChild;
 
@@ -44,6 +45,7 @@ class UdBasicButton extends StatelessWidget {
     this.shadowSpreadRadius,
     this.splashColor,
     this.disableShadow,
+    this.skipTraversal,
     this.customChild,
     this.onTap,
   });
@@ -67,6 +69,7 @@ class UdBasicButton extends StatelessWidget {
         backgroundColor: backgroundColor ?? DoNotUseThisPackageColors.theme,
       ),
       child: RaisedButton(
+        focusNode: FocusNode(skipTraversal: skipTraversal ?? true),
         padding: EdgeInsets.all(
           paddingArroundTitle ?? 0,
         ),
