@@ -1,3 +1,7 @@
+## 0.3.2
+
+* package dependency update
+
 ## 0.3.1
 
 * skipTraversal option added for all tapable widgets
