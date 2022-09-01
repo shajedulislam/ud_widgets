@@ -62,3 +62,7 @@ A flutter package with collection of simplified widgets that will make your appl
 ## Demo
   
 ![Widget demo picture](https://www.shajedulislam.dev/udwidgets/ud_widget_example.png)
+
+<p align="center">
+  <a Shajedul Islam href="https://shajedul.com"></a>
+</p>
