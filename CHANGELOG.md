@@ -1,3 +1,9 @@
+## 0.3.3
+
+* Raised button removed from UdBasicButton
+* Android 12 Migration
+* Dart and Flutter SDK upgrade
+
 ## 0.3.2
 
 * package dependency update

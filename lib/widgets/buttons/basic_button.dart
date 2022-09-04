@@ -68,26 +68,24 @@ class UdBasicButton extends StatelessWidget {
         shadowSpreadRadius: shadowSpreadRadius,
         backgroundColor: backgroundColor ?? DoNotUseThisPackageColors.theme,
       ),
-      child: RaisedButton(
+      child: ElevatedButton(
         focusNode: FocusNode(skipTraversal: skipTraversal ?? true),
-        padding: EdgeInsets.all(
-          paddingArroundTitle ?? 0,
-        ),
-        color: backgroundColor ?? DoNotUseThisPackageColors.theme,
-        highlightColor: Colors.transparent,
-        elevation: 0,
-        focusElevation: 0,
-        highlightElevation: 0,
-        splashColor: splashColor ?? Colors.white.withOpacity(0.1),
-        shape: RoundedRectangleBorder(
-          side: BorderSide(
-            color: borderColor ?? Colors.transparent,
-            width: borderWidth ?? 0,
+        style: ElevatedButton.styleFrom(
+          elevation: 0,
+          minimumSize: const Size(50, 20),
+          padding: EdgeInsets.all(paddingArroundTitle ?? 0),
+          backgroundColor: backgroundColor ?? DoNotUseThisPackageColors.theme,
+          shape: RoundedRectangleBorder(
+            side: BorderSide(
+              color: borderColor ?? Colors.transparent,
+              width: borderWidth ?? 0,
+            ),
+            borderRadius: customBorderRadius ??
+                BorderRadius.circular(
+                  borderRadius ?? _design * 2,
+                ),
           ),
-          borderRadius: customBorderRadius ??
-              BorderRadius.circular(
-                borderRadius ?? _design * 2,
-              ),
+          shadowColor: Colors.transparent,
         ),
         child: customChild ??
             UdText(

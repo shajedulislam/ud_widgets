@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:io';
-import '../../constants/colors.dart';
 import '../../functions/design.dart';
 import '../../ud_widgets.dart';
-import '../decorations/container_box_decoration.dart';
 
 class UdAppBar extends StatelessWidget implements PreferredSizeWidget {
   final BuildContext context;
@@ -95,124 +93,111 @@ class UdAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.gradientEnable,
     this.gradient,
   }) : preferredSize = Size.fromHeight(
-          context != null
-              ? height != null
-                  ? Platform.isIOS
-                      ? height
-                      : MediaQuery.of(context).padding.top +
-                          height -
-                          doNotUseThisDesignValue(context: context) * 20
-                  : Platform.isIOS
-                      ? doNotUseThisDesignValue(context: context) * 106
-                      : MediaQuery.of(context).padding.top +
-                          doNotUseThisDesignValue(context: context) * 55
-              : 0,
+          height != null
+              ? Platform.isIOS
+                  ? height
+                  : MediaQuery.of(context).padding.top +
+                      height -
+                      doNotUseThisDesignValue(context: context) * 20
+              : Platform.isIOS
+                  ? doNotUseThisDesignValue(context: context) * 106
+                  : MediaQuery.of(context).padding.top +
+                      doNotUseThisDesignValue(context: context) * 55,
         );
   @override
   Widget build(BuildContext contextInside) {
-    if (context == null) {
-      print("==UD==> Please provide [ context ] for [ UdAppBar ]");
-    }
     double _design = doNotUseThisDesignValue(context: contextInside);
-    return context != null
-        ? Container(
-            height: height != null
-                ? Platform.isIOS
-                    ? height
-                    : MediaQuery.of(context).padding.top + height! - _design * 20
-                : Platform.isIOS
-                    ? _design * 106
-                    : MediaQuery.of(context).padding.top + _design * 55,
-            width: double.infinity,
-            decoration: udContainerBoxDecoration(
-              context: contextInside,
-              disableShadow: disableShadow,
-              shadowColor: shadowColor ??
-                  DoNotUseThisPackageColors.black.withOpacity(0.1),
-              shadowBlurRadius: shadowBlurRadius,
-              shadowOffset: shadowOffset,
-              borderRadius: 0,
-              shadowSpreadRadius: shadowSpreadRadius,
-              backgroundColor:
-                  backgroundColor ?? DoNotUseThisPackageColors.theme,
-              gradient: gradient,
-              gradientEnable: gradientEnable,
+    return Container(
+      height: height != null
+          ? Platform.isIOS
+              ? height
+              : MediaQuery.of(context).padding.top + height! - _design * 20
+          : Platform.isIOS
+              ? _design * 106
+              : MediaQuery.of(context).padding.top + _design * 55,
+      width: double.infinity,
+      decoration: udContainerBoxDecoration(
+        context: contextInside,
+        disableShadow: disableShadow,
+        shadowColor:
+            shadowColor ?? DoNotUseThisPackageColors.black.withOpacity(0.1),
+        shadowBlurRadius: shadowBlurRadius,
+        shadowOffset: shadowOffset,
+        borderRadius: 0,
+        shadowSpreadRadius: shadowSpreadRadius,
+        backgroundColor: backgroundColor ?? DoNotUseThisPackageColors.theme,
+        gradient: gradient,
+        gradientEnable: gradientEnable,
+      ),
+      child: customDesign ??
+          Container(
+            padding: EdgeInsets.only(
+              left: appBarPaddingLeft ?? _design * 16,
+              right: appBarPaddingright ?? _design * 16,
             ),
-            child: customDesign ??
-                Container(
-                  padding: EdgeInsets.only(
-                    left: appBarPaddingLeft ?? _design * 16,
-                    right: appBarPaddingright ?? _design * 16,
+            child: SafeArea(
+              top: true,
+              bottom: false,
+              child: Stack(
+                alignment: Alignment.center,
+                children: <Widget>[
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: customLeft ?? SizedBox.shrink(),
                   ),
-                  child: SafeArea(
-                    top: true,
-                    bottom: false,
-                    child: Stack(
-                      alignment: Alignment.center,
-                      children: <Widget>[
-                        Align(
-                          alignment: Alignment.centerLeft,
-                          child: customLeft ?? SizedBox.shrink(),
-                        ),
-                        customMiddle != null
-                            ? Container(
-                                alignment: Alignment.center,
-                                child: customMiddle,
-                              )
-                            : titleText != null
-                                ? Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    mainAxisAlignment:
-                                        titleAlignment == Alignment.centerLeft
-                                            ? MainAxisAlignment.start
-                                            : titleAlignment ==
-                                                    Alignment.centerRight
-                                                ? MainAxisAlignment.end
-                                                : MainAxisAlignment.center,
-                                    children: <Widget>[
-                                      SizedBox(
-                                        width: titleAlignment ==
-                                                Alignment.centerLeft
-                                            ? titlePaddingLeft ?? _design * 40
-                                            : 0,
-                                      ),
-                                      Container(
-                                        width: titleWidth ??
-                                            doNotUseThisHorizontalValue(
-                                                  context: contextInside,
-                                                ) *
-                                                60,
-                                        alignment:
-                                            titleAlignment ?? Alignment.center,
-                                        child: UdText(
-                                          text: titleText,
-                                          fontSize: titleFontSize ?? 16,
-                                          color: titleColor ??
-                                              DoNotUseThisPackageColors.white,
-                                          alignment: TextAlign.center,
-                                          fontWeight: titleFontWeight ??
-                                              FontWeight.w500,
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        width: titleAlignment ==
-                                                Alignment.centerRight
-                                            ? titlePaddingRight ?? _design * 55
-                                            : 0,
-                                      ),
-                                    ],
-                                  )
-                                : SizedBox.shrink(),
-                        Align(
-                          alignment: Alignment.centerRight,
-                          child: customRight ?? SizedBox.shrink(),
-                        ),
-                      ],
-                    ),
+                  customMiddle != null
+                      ? Container(
+                          alignment: Alignment.center,
+                          child: customMiddle,
+                        )
+                      : titleText != null
+                          ? Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment:
+                                  titleAlignment == Alignment.centerLeft
+                                      ? MainAxisAlignment.start
+                                      : titleAlignment == Alignment.centerRight
+                                          ? MainAxisAlignment.end
+                                          : MainAxisAlignment.center,
+                              children: <Widget>[
+                                SizedBox(
+                                  width: titleAlignment == Alignment.centerLeft
+                                      ? titlePaddingLeft ?? _design * 40
+                                      : 0,
+                                ),
+                                Container(
+                                  width: titleWidth ??
+                                      doNotUseThisHorizontalValue(
+                                            context: contextInside,
+                                          ) *
+                                          60,
+                                  alignment: titleAlignment ?? Alignment.center,
+                                  child: UdText(
+                                    text: titleText,
+                                    fontSize: titleFontSize ?? 16,
+                                    color: titleColor ??
+                                        DoNotUseThisPackageColors.white,
+                                    alignment: TextAlign.center,
+                                    fontWeight:
+                                        titleFontWeight ?? FontWeight.w500,
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: titleAlignment == Alignment.centerRight
+                                      ? titlePaddingRight ?? _design * 55
+                                      : 0,
+                                ),
+                              ],
+                            )
+                          : SizedBox.shrink(),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: customRight ?? SizedBox.shrink(),
                   ),
-                ),
-          )
-        : SizedBox.shrink();
+                ],
+              ),
+            ),
+          ),
+    );
   }
 }
