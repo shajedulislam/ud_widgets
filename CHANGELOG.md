@@ -1,3 +1,7 @@
+## 0.3.4
+
+* foregroundColor and surfaceTintColor added for UdBasicButton
+
 ## 0.3.3
 
 * Raised button removed from UdBasicButton

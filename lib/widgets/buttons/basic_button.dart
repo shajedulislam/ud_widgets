@@ -16,6 +16,8 @@ class UdBasicButton extends StatelessWidget {
   final BorderRadius? customBorderRadius;
   final Color? borderColor;
   final Color? splashColor;
+  final Color? foregroundColor;
+  final Color? surfaceTintColor;
   final bool? disableShadow;
   final Color? shadowColor;
   final Offset? shadowOffset;
@@ -36,6 +38,8 @@ class UdBasicButton extends StatelessWidget {
     this.titleFontWeight,
     this.paddingArroundTitle,
     this.borderColor,
+    this.foregroundColor,
+    this.surfaceTintColor,
     this.borderWidth,
     this.borderRadius,
     this.customBorderRadius,
@@ -75,6 +79,8 @@ class UdBasicButton extends StatelessWidget {
           minimumSize: const Size(50, 20),
           padding: EdgeInsets.all(paddingArroundTitle ?? 0),
           backgroundColor: backgroundColor ?? DoNotUseThisPackageColors.theme,
+          foregroundColor: foregroundColor ?? Colors.transparent,
+          surfaceTintColor: surfaceTintColor ?? Colors.transparent,
           shape: RoundedRectangleBorder(
             side: BorderSide(
               color: borderColor ?? Colors.transparent,
