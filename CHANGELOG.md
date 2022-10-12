@@ -1,3 +1,7 @@
+## 0.3.5
+
+* UdSvgNetworkImage widget added to show svg url images
+
 ## 0.3.4
 
 * foregroundColor and surfaceTintColor added for UdBasicButton
