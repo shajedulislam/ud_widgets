@@ -1,3 +1,7 @@
+## 0.3.6
+
+* UdSvgNetworkImage bug fixed
+
 ## 0.3.5
 
 * UdSvgNetworkImage widget added to show svg url images

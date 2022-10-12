@@ -34,13 +34,13 @@ class UdSvgNetworkImage extends StatelessWidget {
                 Radius.circular(borderRadius ?? _design * 2),
               ),
             ),
-            child: SvgPicture.asset(
+            child: SvgPicture.network(
               imageUrl,
-              color: color,
               fit: boxFit ?? BoxFit.contain,
               alignment: imageAlignment ?? Alignment.center,
               height: height ?? _design * 50,
               width: width ?? _design * 50,
+              placeholderBuilder: (BuildContext context) => SizedBox.shrink(),
             ),
           )
         : SizedBox.shrink();
